@@ -789,15 +789,15 @@ label {
 
 .services-bottom {
   height: 323px;
-  /* border: 1px solid red;
-  box-sizing: border-box; */
+  border: 1px solid transparent;
+  box-sizing: border-box;
   position: relative;
 }
 
 .slide-control-item label {
   display: inline-block;
   background-color: #32425C;
-  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  /* box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069; */
   font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -842,6 +842,10 @@ label {
   background-color: #ffffff;
 }
 
+/* #delivery-id:checked ~ #nevidimiy {
+  display: inline-block;
+} */
+
 .services-bottom-right {
   width: 619px;
   height: 283px;
@@ -850,7 +854,16 @@ label {
   /* border: 1px solid black;
   box-sizing: border-box; */
   position: relative;
+  /* display: none; */
 }
+
+/* .services-bottom-right {
+  display: none;
+} */
+
+/* #delivery-id:checked [class*="services-bottom-right"] {
+  display: none;
+} */
 
 .delivery-text p {
   width: 277px;

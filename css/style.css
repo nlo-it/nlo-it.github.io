@@ -1113,9 +1113,9 @@ address a:hover {
   left: 88px;
 }
 
-.social-btn-vk path:first-child:hover,
-.social-btn-fb path:first-child:hover,
-.social-btn-in path:first-child:hover {
+.social-btn-vk:hover path:first-child,
+.social-btn-fb:hover path:first-child,
+.social-btn-in:hover path:first-child {
   fill: #EE3643;
 }
 

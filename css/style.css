@@ -745,7 +745,8 @@ label {
   box-sizing: border-box;
 }
 
-.service-and-delivery h2 {
+.service-and-delivery h2,
+.service-and-delivery h3 {
   font-family: "Cuprum", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;

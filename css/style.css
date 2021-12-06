@@ -983,6 +983,7 @@ button.map {
   width: 300px;
   margin-bottom: 27px;
   border: none;
+  cursor: pointer;
 }
 
 .address-and-map .btn {

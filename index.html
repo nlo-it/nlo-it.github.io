@@ -88,13 +88,14 @@
               <label class="visually-hidden" for="search">Строка поиска</label>
             </form>
           </div>
+          <!-- Возможно, нужно добавить ещё один <nav> - обернуть им .header-nav-list -->
           <div class="user-nav">
             <ul class="header-nav-list">
               <li class="header-nav-item"><a href="#">
                   <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z"
-                      fill="white" />
+                      fill="white"/>
                   </svg>Закладки: <span>0</span></a>
               </li>
               <li class="header-nav-item"><a href="#">
@@ -148,9 +149,9 @@
       <div class="container">
         <nav class="main-navigation">
           <ul class="navigation-list">
-            <li class="navigation-item"><a href="#">Главная</a></li>
+            <li class="navigation-item"><a href="index.html">Главная</a></li>
             <li class="navigation-item"><a href="#">Компания</a></li>
-            <li class="navigation-item"><a href="#">Каталог</a></li>
+            <li class="navigation-item"><a href="catalog.html">Каталог</a></li>
             <li class="navigation-item"><a href="#">Новости</a></li>
             <li class="navigation-item"><a href="#">Спецпредложения</a></li>
             <li class="navigation-item"><a href="#">Доставка</a></li>
@@ -213,18 +214,33 @@
               </div>
             </li>
             <li class="services-item-slider">
-              <div class="slider">
-                <div class="slider-top">
-                  <h3>ПЕРФОРАТОРЫ</h3>
-                  <p>Настоящие мужские игрушки</p>
-                </div>
-                <div class="slider-bottom">
-                  <a class="btn" href="#" target="_blank" title="Каталог перфораторов">Открыть каталог</a>
+              <div class="main-slider">
+                <input class="visually-hidden" name="slide" type="radio" id="first-slide" checked>
+                <input class="visually-hidden" name="slide" type="radio" id="second-slide">
+                <div class="slider-toggle">
+                  <label class="first-toggle" for="first-slide"></label>
+                  <label class="second-toggle" for="second-slide"></label>
                 </div>
                 <div class="slider-control">
-                  <a class="btn-arrow" href="#"><img src="img/svg/icon-left-arrow.svg" alt="Предыдущий слайд"></a>
-                  <a class="btn-arrow" href="#"><img src="img/svg/icon-right-arrow.svg" alt="Следующий слайд"></a>
+                  <label class="left-arrow" for="first-slide"></label>
+                  <label class="right-arrow" for="second-slide"></label>
                 </div>
+                <ul class="main-slider-list">
+                  <li class="main-slider-item">
+                    <div class="first-slide-content">
+                        <h3>ПЕРФОРАТОРЫ</h3>
+                        <p>Настоящие мужские игрушки</p>
+                        <a class="btn" href="catalog.html" target="_blank" title="Каталог перфораторов">ОТКРЫТЬ КАТАЛОГ</a>
+                    </div>
+                  </li>
+                  <li class="main-slider-item">
+                    <div class="second-slide-content">
+                        <h3>ДРЕЛИ</h3>
+                        <p>Соседям на радость!</p>
+                        <a class="btn" href="catalog.html" target="_blank" title="Каталог перфораторов">ОТКРЫТЬ КАТАЛОГ</a>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </li>
           </ul>
@@ -253,10 +269,10 @@
               </div>
             </li>
             <li class="popular-products-item">
-              <div class="two-item-top-side red-sticker">
+              <div class="second-item-top-side red-sticker">
                 <img src="img/png/perforators/bosch-bfg-3000.png" alt="Перфоратор Bosch BFG 3000">
               </div>
-              <div class="two-item-bottom-side">
+              <div class="second-item-bottom-side">
                 <h3>Перфоратор BOSCH BFG 3000</h3>
                 <p>22500 Р.</p>
                 <a href="#">15500 Р.</a>

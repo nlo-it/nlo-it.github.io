@@ -211,7 +211,7 @@ input[type="search"]:focus::-moz-placeholder {
 }
 
 .header-middle {
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .header-middle-line {
@@ -700,7 +700,8 @@ input[type="search"]:focus::-moz-placeholder {
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
-  text-decoration-line: line-through;
+  /* В html вместо text-decoration: line-through; использован семантичный тег <s>, здесь просто продублировано через css*/
+  text-decoration: line-through;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
@@ -1003,6 +1004,7 @@ input[type="search"]:focus::-moz-placeholder {
 
 .about-company p:first-of-type {
   width: 460px;
+  margin-bottom: 20px;
 }
 
 .about-company p:nth-of-type(2) {

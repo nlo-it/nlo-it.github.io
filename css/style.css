@@ -658,11 +658,22 @@ input[type="search"]:focus::-moz-placeholder {
 .popular-products-list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  /* align-items мб здесь лишний */
   height: 318px;
 }
 
 .popular-products-item {
+  width: 220px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
   border: 2px solid #EAEAEA;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   margin-right: 20px;
   overflow: hidden;
@@ -672,18 +683,105 @@ input[type="search"]:focus::-moz-placeholder {
   margin-right: 0;
 }
 
+.popular-products-item:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.popular-products-item:hover img {
+  visibility: hidden;
+}
+
+.popular-products-item:hover button {
+  visibility: visible;
+}
+
 .popular-products-item div:first-of-type {
   height: 178px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .popular-products-item div:last-of-type {
   height: 140px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.green-btn-type-one {
+  width: 135px;
+  height: 38px;
+  padding: 10px 12px 10px 25px;
+  background-color: #63A63E;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  border: none;
+  box-shadow: inset 0px -3px 0px #367315;
+  border-radius: 2px;
+  position: absolute;
+  top: 38px;
+  left: 41px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.green-btn-type-one:hover {
+  background-color: #5FBB2D;
+}
+
+.green-btn-type-one:active {
+  background-color: #518534;
+}
+
+.green-btn-type-one::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 10px;
+  left: 30px;
+  background: url("/img/svg/icon-cart.svg") no-repeat;
+  opacity: 0.3;
+}
+
+.green-btn-type-two {
+  width: 135px;
+  height: 38px;
+  word-wrap: break-word;
+  background-color: #ffffff;
+  color: #32425C;
+  text-transform: uppercase;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  border: 3px solid #63A63E;
+  box-sizing: border-box;
+  border-radius: 2px;
+  position: absolute;
+  top: 86px;
+  left: 41px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.green-btn-type-two:hover {
+  border: 3px solid #32425C;
+}
+
+.green-btn-type-two:active {
+  opacity: 0.5;
 }
 
 .popular-products-item h3 {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: bold;
   font-size: 18px;
   line-height: 20px;
   display: flex;
@@ -691,68 +789,26 @@ input[type="search"]:focus::-moz-placeholder {
   text-align: center;
   color: #000000;
   align-content: center;
-  margin-top: 12px;
+  margin-top: -5px;
 }
 
-.popular-products-item div:last-of-type p {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: bold;
+.popular-products-item p {
   font-size: 17px;
   line-height: 18px;
-  /* В html вместо text-decoration: line-through; использован семантичный тег <s>, здесь просто продублировано через css*/
+  /* В html вместо text-decoration: line-through; использован семантичный тег <s>, здесь просто продублировано через css - мб стоит удалить*/
   text-decoration: line-through;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: #A9A9A9;
-  align-content: center;
-  position: absolute;
-  left: 75px;
-  bottom: 65px;
+  margin-bottom: 10px;
 }
 
-.popular-products-item div:last-of-type a {
+.popular-products-item div a {
   background: url("/img/png/others/price-button.png") no-repeat center;
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: bold;
   font-size: 17px;
   line-height: 18px;
   text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: #FFFFFF;
   padding: 10px 44px 10px 32px;
-  position: absolute;
-  left: 44px;
-  bottom: 19px;
-}
-
-.first-item-top-side img {
-  position: absolute;
-  top: 6px;
-  left: 18px;
-}
-
-.second-item-top-side img {
-  position: absolute;
-  top: 29px;
-  left: 40px;
-}
-
-.three-item-top-side img {
-  position: absolute;
-  top: 22px;
-  left: 33px;
-}
-
-.four-item-top-side img {
-  position: absolute;
-  top: 29px;
-  left: 40px;
 }
 
 .header-popular-brands {

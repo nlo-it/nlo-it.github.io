@@ -1083,7 +1083,7 @@ button.map img {
 .footer-top,
 .footer-middle,
 .footer-bottom,
-.main-footer ul {
+footer ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1136,7 +1136,7 @@ footer p {
 }
 
 .footer-middle a,
-address a {
+.feedback address a {
   color: #FFD180;
 }
 
@@ -1162,32 +1162,27 @@ address a:hover {
   margin-top: -55px;
 }
 
-.footer-bottom p {
-  width: 330px;
+.footer-bottom p,
+.footer-bottom a {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
   color: #ffffff;
+}
+
+.footer-bottom > p {
+  width: 228px;
   margin-right: 162px;
 }
 
-.footer-social {
-  width: 132px;
-  height: 44px;
-  position: relative;
+.footer-social-list {
+  margin-right: 118px;
 }
 
-.footer-social a {
-  position: absolute;
-}
-
-.social-btn-vk {
-  left: 0;
-}
-
-.social-btn-fb {
-  left: 44px;
-}
-
-.social-btn-in {
-  left: 88px;
+.footer-social-list li.footer-social-item {
+  margin: 0;
 }
 
 .social-btn-vk:hover path:first-child,
@@ -1200,8 +1195,6 @@ address {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px;
-  margin-left: 118px;
 }
 
 address p:first-child {

@@ -660,8 +660,7 @@ input[type="search"]:focus::-moz-placeholder {
   margin-right: 14px;
 }
 
-.popular-products-list,
-.product-list {
+.popular-products-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -691,26 +690,31 @@ input[type="search"]:focus::-moz-placeholder {
   margin-right: 0;
 }
 
-.popular-products-item:hover {
+.popular-products-item:hover,
+.product-item:hover {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.popular-products-item:hover img {
+.popular-products-item:hover img,
+.product-item:hover img {
   visibility: hidden;
 }
 
-.popular-products-item:hover button {
+.popular-products-item:hover button,
+.product-item:hover button {
   visibility: visible;
 }
 
-.popular-products-item div:first-of-type {
+.popular-products-item div:first-of-type,
+.product-item div:first-of-type {
   height: 178px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.popular-products-item div:last-of-type {
+.popular-products-item div:last-of-type,
+.product-item div:last-of-type {
   height: 140px;
   display: flex;
   justify-content: center;
@@ -789,7 +793,8 @@ input[type="search"]:focus::-moz-placeholder {
   opacity: 0.5;
 }
 
-.popular-products-item h3 {
+.popular-products-item h3,
+.product-item h3 {
   width: 157px;
   font-size: 18px;
   font-weight: 700;
@@ -803,11 +808,13 @@ input[type="search"]:focus::-moz-placeholder {
   display: inline-block;
 }
 
-.popular-products-item span {
+.popular-products-item span,
+.product-item span {
   text-transform: uppercase;
 }
 
-.popular-products-item p {
+.popular-products-item p,
+.product-item p {
   font-size: 17px;
   line-height: 18px;
   /* В html вместо text-decoration: line-through; использован семантичный тег <s>, здесь просто продублировано через css - мб стоит удалить*/
@@ -817,7 +824,8 @@ input[type="search"]:focus::-moz-placeholder {
   margin-bottom: 10px;
 }
 
-.popular-products-item div a:last-child {
+.popular-products-item div a:last-child,
+.product-item div a:last-child {
   background: url("/img/png/others/price-button.png") no-repeat center;
   font-size: 17px;
   line-height: 18px;
@@ -1530,23 +1538,14 @@ h1.catalog {
   padding-left: 29px;
 }
 
-/* main .container {
-  border: 1px solid red;
-  box-sizing: border-box;
-} */
-
 .catalog-positioning {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 220px 720px;
+  gap: 20px;
 }
 
 .filters {
-  width: 220px;
   height: 720px;
-  /* border: 1px solid red;
-  box-sizing: border-box; */
-  /* margin-right: 20px; */
 }
 
 fieldset {
@@ -1556,6 +1555,7 @@ fieldset {
 }
 
 .price-range {
+  width: 100%;
   height: 38px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
@@ -1563,8 +1563,6 @@ fieldset {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid red;
-  box-sizing: border-box; */
 }
 
 .first-range-label,
@@ -1610,9 +1608,6 @@ input[type=number] {
 }
 
 .product {
-  width: 720px;
-  /* border: 1px solid red;
-  box-sizing: border-box; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1620,13 +1615,12 @@ input[type=number] {
 }
 
 .sorting {
-  width: 100%;
+  width: 700px;
   height: 38px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid red;
-  box-sizing: border-box;
+  margin-right: auto;
   margin-bottom: 10px;
 }
 
@@ -1637,22 +1631,83 @@ input[type=number] {
 }
 
 .product-list {
-  width: 100%;
-  /* border: 1px solid red;
-  box-sizing: border-box; */
-  flex-wrap: wrap;
-  padding-bottom: 48px;
+  width: 720px;
+  display: grid;
+  grid-template-columns: 220px 220px 220px;
+  grid-template-rows: 318px 318px 318px;
+  gap: 20px;
+  margin-bottom: 48px;
 }
 
 .pagination-list {
-  width: 700px;
+  width: 284px;
   height: 38px;
-  background-color: red;
-  padding-bottom: 59px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-self: flex-start;
+  margin-bottom: 59px;
+}
+
+.pagination-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border: 1px solid #E5E5E5;
+}
+
+.pagination-item:not(:last-of-type) {
+  width: 38px;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.pagination-item:last-of-type {
+  width: 140px;
+  height: 100%;
+}
+
+.pagination-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0 auto;
+}
+
+.description-of-perforators-background {
+  background-color: #F1F5F7;
 }
 
 .description-of-perforators {
   height: 261px;
-  /* border: 1px solid red;
-  box-sizing: border-box; */
+  font-style: normal;
+  font-weight: normal;
+  color: #000000;
+}
+
+.description-of-perforators h3 {
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  padding-top: 64px;
+  padding-bottom: 25px;
+}
+
+.description-of-perforators p {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
 }

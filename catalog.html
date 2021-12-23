@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- <link rel="stylesheet" href="css/outlines.css"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
     <div class="header-top">
       <div class="container">
         <div class="header-logo">
-          <a class="logo-link">
+          <a href="index.html" class="logo-link">
             <svg width="220" height="47" viewBox="0 0 220 47" fill="none" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink">
               <g filter="url(#filter0_i_65044_1992)">
@@ -100,7 +100,7 @@
                       fill="white" />
                   </svg>Закладки: <span>0</span></a>
               </li>
-              <li class="header-nav-item"><a href="#">
+              <li class="header-nav-item"><a class="red-background" href="#">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"
@@ -118,9 +118,8 @@
       </div>
       <div class="header-middle">
         <div class="container">
-          <div class="header-middle-line">
+          <div class="header-middle-line catalog">
             <div class="header-middle-left-side">
-              <!-- Изменить на странице каталога этот тег на h2, например -->
               <p>Интернет-магазин строительных материалов <br>и инструментов для ремонта</p>
             </div>
             <div class="header-middle-center-side">
@@ -150,13 +149,13 @@
           <div class="container">
             <nav class="main-navigation">
               <ul class="navigation-list">
-                <li class="navigation-item"><a href="index.html">Главная</a></li>
-                <li class="navigation-item"><a href="blank.html">Компания</a></li>
-                <li class="navigation-item"><a href="catalog.html">Каталог</a></li>
-                <li class="navigation-item"><a href="blank.html">Новости</a></li>
-                <li class="navigation-item"><a href="blank.html">Спецпредложения</a></li>
-                <li class="navigation-item"><a href="blank.html">Доставка</a></li>
-                <li class="navigation-item"><a href="blank.html">Контакты</a></li>
+                <li class="navigation-item"><a class="main-btn" href="index.html">Главная</a></li>
+                <li class="navigation-item"><a class="company-btn" href="blank.html">Компания</a></li>
+                <li class="navigation-item"><a class="catalog-btn">Каталог</a></li>
+                <li class="navigation-item"><a class="news-btn" href="blank.html">Новости</a></li>
+                <li class="navigation-item"><a class="special-btn" href="blank.html">Спецпредложения</a></li>
+                <li class="navigation-item"><a class="delivery-btn">Доставка</a></li>
+                <li class="navigation-item"><a class="contacts-btn">Контакты</a></li>
               </ul>
             </nav>
           </div>
@@ -169,201 +168,231 @@
       <div class="paginated-navigation">
         <ul class="bread-crumbs-list">
           <li class="bread-crumbs-item"><a href="index.html" title="Главная"></a></li>
-          <li class="bread-crumbs-item"><a href="catalog.html" title="Каталог">Каталог</a></li>
+          <li class="bread-crumbs-item"><a title="Каталог">Каталог</a></li>
           <li class="bread-crumbs-item"><a href="blank.html" title="Инструмент">Инструмент</a></li>
           <li class="bread-crumbs-item"><a title="Перфораторы">Перфораторы</a></li>
         </ul>
       </div>
-
-      <h1>Перфораторы</h1>
-
-      <section class="filter">
-        <h2 class="visually-hidden">Фильтр товаров</h2>
-        <form method="get" action="#">
-          <fieldset>
-            <legend>Фильтр:</legend>
+      <h1 class="catalog">Перфораторы</h1>
+      <div class="catalog-positioning">
+        <section class="filters">
+          <h2 class="visually-hidden">Фильтр товаров</h2>
+          <form method="get" action="#">
             <fieldset>
-              <legend for="price-range">Цена:<span>0</span></legend>
-              <label for="price-range">
-                <input type="range" min="0" max="30000" step="1" name="price-range" id="price-range">
-              </label>
-              <span>30000</span>
-            </fieldset>
-            <fieldset>
-              <legend>Производители:</legend>
-              <ul>
-                <li>
-                  <input type="checkbox" name="manufacturer-bosch" id="filter-manufacturer-bosch" checked>
-                  <label for="filter-manufacturer-bosch">Bosch</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="manufacturer-interskol" id="filter-manufacturer-interskol">
-                  <label for="filter-manufacturer-interskol">Интерскол</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="manufacturer-makita" id="filter-manufacturer-makita" checked>
-                  <label for="filter-manufacturer-makita">Makita</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="manufacturer-dewalt" id="filter-manufacturer-dewalt">
-                  <label for="filter-manufacturer-dewalt">Dewalt</label>
-                </li>
-                <li>
-                  <input type="checkbox" name="manufacturer-hitachi" id="filter-manufacturer-hitachi">
-                  <label for="filter-manufacturer-hitachi">Hitachi</label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset>
-              <legend>Питание:</legend>
-              <ul>
-                <li>
-                  <input type="radio" name="type-power-supply" id="filter-battery" value="battery" checked>
-                  <label for="filter-battery">Аккумуляторные</label>
-                </li>
-                <li>
-                  <input type="radio" name="type-power-supply" id="filter-network" value="network">
-                  <label for="filter-network">Сетевые</label>
-                </li>
-              </ul>
-            </fieldset>
-          </fieldset>
-          <button type="button">Показать</button>
-        </form>
-      </section>
+              <legend>Фильтр:</legend>
+              <fieldset>
+                <legend>Цена:</legend>
+                <div class="range-slider">
+                  <div class="scale-and-toggles">
 
-      <section class="sorting">
-        <fieldset>
-          <legend>Сортировка:</legend>
-          <ul class="sorting-list">
-            <li class="sorting-item"><a class="sorting-link">По цене</a></li>
-            <li class="sorting-item"><a class="sorting-link" href="#">По типу</a></li>
-            <li class="sorting-item"><a class="sorting-link" href="#">По функционалу</a></li>
-            <li class="sorting-item"><a class="sorting-link" href="#" title="Снизу вверх"></a></li>
-            <li class="sorting-item"><a class="sorting-link" href="#" title="Сверху вниз"></a></li>
+                  </div>
+                  <div class="price-range">
+                    <label class="first-range-label" for="first-range-toggle">
+                      <input class="first-range-input" type="number" min="0" max="30000" step="1"
+                        name="first-range-toggle" placeholder="0" id="first-range-toggle">
+                    </label>
+                    <span class="defis">—</span>
+                    <label class="second-range-label" for="second-range-toggle">
+                      <input class="second-range-input" type="number" min="0" max="30000" step="1"
+                        name="second-range-toggle" placeholder="30000" id="second-range-toggle">
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Производители:</legend>
+                <ul>
+                  <li>
+                    <input type="checkbox" name="manufacturer-bosch" value="bosch" id="filter-manufacturer-bosch"
+                      checked>
+                    <label for="filter-manufacturer-bosch">Bosch</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="manufacturer-interskol" value="interskol"
+                      id="filter-manufacturer-interskol">
+                    <label for="filter-manufacturer-interskol">Интерскол</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="manufacturer-makita" value="makita" id="filter-manufacturer-makita"
+                      checked>
+                    <label for="filter-manufacturer-makita">Makita</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="manufacturer-dewalt" value="dewalt" id="filter-manufacturer-dewalt">
+                    <label for="filter-manufacturer-dewalt">Dewalt</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" name="manufacturer-hitachi" value="hitachi" id="filter-manufacturer-hitachi">
+                    <label for="filter-manufacturer-hitachi">Hitachi</label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset>
+                <legend>Питание:</legend>
+                <ul>
+                  <li>
+                    <input type="radio" name="type-power-supply" value="battery" id="filter-battery" checked>
+                    <label for="filter-battery">Аккумуляторные</label>
+                  </li>
+                  <li>
+                    <input type="radio" name="type-power-supply" value="network" id="filter-network">
+                    <label for="filter-network">Сетевые</label>
+                  </li>
+                </ul>
+              </fieldset>
+            </fieldset>
+            <button type="button">Показать</button>
+          </form>
+        </section>
+
+        <section class="product">
+          <h2 class="visually-hidden">Список перфораторов</h2>
+          <section class="sorting">
+            <h3>Сортировка:</h3>
+            <ul class="sorting-list">
+              <li class="sorting-item"><a class="sorting-link">По цене</a></li>
+              <li class="sorting-item"><a class="sorting-link" href="#">По типу</a></li>
+              <li class="sorting-item"><a class="sorting-link" href="#">По функционалу</a></li>
+              <li class="sorting-item"><a class="sorting-link" href="#" title="Снизу вверх"></a></li>
+              <li class="sorting-item"><a class="sorting-link" href="#" title="Сверху вниз"></a></li>
+            </ul>
+          </section>
+          <ul class="product-list">
+            <li class="product-item">
+              <div class="three-item-top-side">
+                <img src="img/png/perforators/bosch-bfg-6000.png" alt="Перфоратор bosch bfg 6000">
+                <button class="green-btn-type-one" type="button">Купить</button>
+                <button class="green-btn-type-two" type="button">В закладки</button>
+              </div>
+              <div class="three-item-bottom-side">
+                <a class="product-name-link" href="#">
+                  <h3>Перфоратор <span>bosch bfg 6000</span></h3>
+                </a>
+                <p><s>30500 Р.</s></p>
+                <a href="#">25500 Р.</a>
+              </div>
+            </li>
+            <li class="product-item">
+              <div class="three-item-top-side">
+                <img src="img/png/perforators/bosch-bfg-6000.png" alt="Перфоратор bosch bfg 6000">
+                <button class="green-btn-type-one" type="button">Купить</button>
+                <button class="green-btn-type-two" type="button">В закладки</button>
+              </div>
+              <div class="three-item-bottom-side">
+                <a class="product-name-link" href="#">
+                  <h3>Перфоратор <span>bosch bfg 6000</span></h3>
+                </a>
+                <p><s>30500 Р.</s></p>
+                <a href="#">25500 Р.</a>
+              </div>
+            </li>
+            <li class="product-item">
+              <div class="three-item-top-side">
+                <img src="img/png/perforators/bosch-bfg-6000.png" alt="Перфоратор bosch bfg 6000">
+                <button class="green-btn-type-one" type="button">Купить</button>
+                <button class="green-btn-type-two" type="button">В закладки</button>
+              </div>
+              <div class="three-item-bottom-side">
+                <a class="product-name-link" href="#">
+                  <h3>Перфоратор <span>bosch bfg 6000</span></h3>
+                </a>
+                <p><s>30500 Р.</s></p>
+                <a href="#">25500 Р.</a>
+              </div>
+            </li>
+            <li class="product-item">
+              <div class="second-item-top-side red-sticker">
+                <img src="img/png/perforators/bosch-bfg-3000.png" alt="Перфоратор bosch bfg 3000">
+                <button class="green-btn-type-one" type="button">Купить</button>
+                <button class="green-btn-type-two" type="button">В закладки</button>
+              </div>
+              <div class="second-item-bottom-side">
+                <a class="product-name-link" href="#">
+                  <h3>Перфоратор <span>bosch bfg 3000</span></h3>
+                </a>
+                <p><s>22500 Р.</s></p>
+                <a href="#">15500 Р.</a>
+              </div>
+            </li>
+            <li class="product-item">
+              <div class="three-item-top-side">
+                <img src="img/png/perforators/bosch-bfg-6000.png" alt="Перфоратор bosch bfg 6000">
+                <button class="green-btn-type-one" type="button">Купить</button>
+                <button class="green-btn-type-two" type="button">В закладки</button>
+              </div>
+              <div class="three-item-bottom-side">
+                <a class="product-name-link" href="#">
+                  <h3>Перфоратор <span>bosch bfg 6000</span></h3>
+                </a>
+                <p><s>30500 Р.</s></p>
+                <a href="#">25500 Р.</a>
+              </div>
+            </li>
+            <li class="product-item">
+              <div class="four-item-top-side red-sticker">
+                <img src="img/png/perforators/bosch-bfg-2000.png" alt="Перфоратор bosch bfg 2000">
+                <button class="green-btn-type-one" type="button">Купить</button>
+                <button class="green-btn-type-two" type="button">В закладки</button>
+              </div>
+              <div class="four-item-bottom-side">
+                <a class="product-name-link" href="#">
+                  <h3>Перфоратор <span>bosch bfg 2000</span></h3>
+                </a>
+                <p><s>22500 Р.</s></p>
+                <a href="#">12500 Р.</a>
+              </div>
+            </li>
+            <li class="product-item">
+              <div class="second-item-top-side red-sticker">
+                <img src="img/png/perforators/bosch-bfg-3000.png" alt="Перфоратор bosch bfg 3000">
+                <button class="green-btn-type-one" type="button">Купить</button>
+                <button class="green-btn-type-two" type="button">В закладки</button>
+              </div>
+              <div class="second-item-bottom-side">
+                <a class="product-name-link" href="#">
+                  <h3>Перфоратор <span>bosch bfg 3000</span></h3>
+                </a>
+                <p><s>22500 Р.</s></p>
+                <a href="#">15500 Р.</a>
+              </div>
+            </li>
+            <li class="product-item">
+              <div class="three-item-top-side">
+                <img src="img/png/perforators/bosch-bfg-6000.png" alt="Перфоратор bosch bfg 6000">
+                <button class="green-btn-type-one" type="button">Купить</button>
+                <button class="green-btn-type-two" type="button">В закладки</button>
+              </div>
+              <div class="three-item-bottom-side">
+                <a class="product-name-link" href="#">
+                  <h3>Перфоратор <span>bosch bfg 6000</span></h3>
+                </a>
+                <p><s>30500 Р.</s></p>
+                <a href="#">25500 Р.</a>
+              </div>
+            </li>
+            <li class="product-item">
+              <div class="four-item-top-side red-sticker">
+                <img src="img/png/perforators/bosch-bfg-2000.png" alt="Перфоратор bosch bfg 2000">
+                <button class="green-btn-type-one" type="button">Купить</button>
+                <button class="green-btn-type-two" type="button">В закладки</button>
+              </div>
+              <div class="four-item-bottom-side">
+                <a class="product-name-link" href="#">
+                  <h3>Перфоратор <span>bosch bfg 2000</span></h3>
+                </a>
+                <p><s>22500 Р.</s></p>
+                <a href="#">12500 Р.</a>
+              </div>
+            </li>
           </ul>
-        </fieldset>
-      </section>
-
-      <section class="product">
-        <h2 class="visually-hidden">Список перфораторов</h2>
-        <ul class="product-list">
-          <li class="product-item">
-            <div class="three-item-top-side">
-              <img src="img/png/perforators/bosch-bfg-6000.png" alt="Перфоратор bosch bfg 6000">
-              <button class="green-btn-type-one" type="button">Купить</button>
-              <button class="green-btn-type-two" type="button">В закладки</button>
-            </div>
-            <div class="three-item-bottom-side">
-              <h3>Перфоратор <span>bosch bfg 6000</span></h3>
-              <p><s>30500 Р.</s></p>
-              <a href="#">25500 Р.</a>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="three-item-top-side">
-              <img src="img/png/perforators/bosch-bfg-6000.png" alt="Перфоратор bosch bfg 6000">
-              <button class="green-btn-type-one" type="button">Купить</button>
-              <button class="green-btn-type-two" type="button">В закладки</button>
-            </div>
-            <div class="three-item-bottom-side">
-              <h3>Перфоратор <span>bosch bfg 6000</span></h3>
-              <p><s>30500 Р.</s></p>
-              <a href="#">25500 Р.</a>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="three-item-top-side">
-              <img src="img/png/perforators/bosch-bfg-6000.png" alt="Перфоратор bosch bfg 6000">
-              <button class="green-btn-type-one" type="button">Купить</button>
-              <button class="green-btn-type-two" type="button">В закладки</button>
-            </div>
-            <div class="three-item-bottom-side">
-              <h3>Перфоратор <span>bosch bfg 6000</span></h3>
-              <p><s>30500 Р.</s></p>
-              <a href="#">25500 Р.</a>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="second-item-top-side red-sticker">
-              <img src="img/png/perforators/bosch-bfg-3000.png" alt="Перфоратор bosch bfg 3000">
-              <button class="green-btn-type-one" type="button">Купить</button>
-              <button class="green-btn-type-two" type="button">В закладки</button>
-            </div>
-            <div class="second-item-bottom-side">
-              <h3>Перфоратор <span>bosch bfg 3000</span></h3>
-              <p><s>22500 Р.</s></p>
-              <a href="#">15500 Р.</a>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="three-item-top-side">
-              <img src="img/png/perforators/bosch-bfg-6000.png" alt="Перфоратор bosch bfg 6000">
-              <button class="green-btn-type-one" type="button">Купить</button>
-              <button class="green-btn-type-two" type="button">В закладки</button>
-            </div>
-            <div class="three-item-bottom-side">
-              <h3>Перфоратор <span>bosch bfg 6000</span></h3>
-              <p><s>30500 Р.</s></p>
-              <a href="#">25500 Р.</a>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="four-item-top-side red-sticker">
-              <img src="img/png/perforators/bosch-bfg-2000.png" alt="Перфоратор bosch bfg 2000">
-              <button class="green-btn-type-one" type="button">Купить</button>
-              <button class="green-btn-type-two" type="button">В закладки</button>
-            </div>
-            <div class="four-item-bottom-side">
-              <h3>Перфоратор <span>bosch bfg 2000</span></h3>
-              <p><s>22500 Р.</s></p>
-              <a href="#">12500 Р.</a>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="second-item-top-side red-sticker">
-              <img src="img/png/perforators/bosch-bfg-3000.png" alt="Перфоратор bosch bfg 3000">
-              <button class="green-btn-type-one" type="button">Купить</button>
-              <button class="green-btn-type-two" type="button">В закладки</button>
-            </div>
-            <div class="second-item-bottom-side">
-              <h3>Перфоратор <span>bosch bfg 3000</span></h3>
-              <p><s>22500 Р.</s></p>
-              <a href="#">15500 Р.</a>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="three-item-top-side">
-              <img src="img/png/perforators/bosch-bfg-6000.png" alt="Перфоратор bosch bfg 6000">
-              <button class="green-btn-type-one" type="button">Купить</button>
-              <button class="green-btn-type-two" type="button">В закладки</button>
-            </div>
-            <div class="three-item-bottom-side">
-              <h3>Перфоратор <span>bosch bfg 6000</span></h3>
-              <p><s>30500 Р.</s></p>
-              <a href="#">25500 Р.</a>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="four-item-top-side red-sticker">
-              <img src="img/png/perforators/bosch-bfg-2000.png" alt="Перфоратор bosch bfg 2000">
-              <button class="green-btn-type-one" type="button">Купить</button>
-              <button class="green-btn-type-two" type="button">В закладки</button>
-            </div>
-            <div class="four-item-bottom-side">
-              <h3>Перфоратор <span>bosch bfg 2000</span></h3>
-              <p><s>22500 Р.</s></p>
-              <a href="#">12500 Р.</a>
-            </div>
-          </li>
-        </ul>
-        <ul class="pagination-list">
-          <li class="pagination-item"><a>1</a></li>
-          <li class="pagination-item"><a href="#">2</a></li>
-          <li class="pagination-item"><a href="#">3</a></li>
-          <li class="pagination-item"><a href="#">Следующая</a></li>
-        </ul>
-      </section>
+          <ul class="pagination-list">
+            <li class="pagination-item"><a>1</a></li>
+            <li class="pagination-item"><a href="#">2</a></li>
+            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="pagination-item"><a href="#">Следующая</a></li>
+          </ul>
+        </section>
+      </div>
       <div class="description-of-perforators">
         <h3>Пара слов о перфораторах</h3>
         <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
@@ -381,13 +410,13 @@
     <div class="footer-top-background">
       <div class="container">
         <div class="footer-top">
-          <a class="logo-link">
+          <a href="index.html" class="logo-link">
             <img src="img/svg/logo-footer.svg" alt="Логотип интернет-магазина Техномарт" width="220" height="68">
           </a>
           <ul class="footer-top-right-list">
             <li class="footer-top-right-item"><a href="blank.html">Компания</a></li>
             <li class="footer-top-right-item"><a href="blank.html">Новости</a></li>
-            <li class="footer-top-right-item"><a href="catalog.html">Каталог</a></li>
+            <li class="footer-top-right-item"><a>Каталог</a></li>
             <li class="footer-top-right-item"><a href="blank.html">Доставка</a></li>
             <li class="footer-top-right-item"><a href="blank.html">Контакты</a></li>
           </ul>

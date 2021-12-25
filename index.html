@@ -94,14 +94,17 @@
           <!-- Возможно, нужно добавить ещё один <nav> - обернуть им .header-nav-list -->
           <div class="user-nav">
             <ul class="header-nav-list">
-              <li class="header-nav-item"><a href="#">
+              <li class="header-nav-item">
+                <a href="#">
                   <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z"
                       fill="white" />
-                  </svg>Закладки: <span>0</span></a>
+                  </svg>Закладки: <span>0</span>
+                </a>
               </li>
-              <li class="header-nav-item"><a href="#">
+              <li class="header-nav-item">
+                <a href="#">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"
@@ -110,9 +113,12 @@
                       d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z"
                       fill="white" />
                     <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white" />
-                  </svg>Корзина: <span>0</span></a>
+                  </svg>Корзина: <span>0</span>
+                </a>
               </li>
-              <li class="header-nav-item"><a href="#">Оформить заказ</a></li>
+              <li class="header-nav-item">
+                <a href="#">Оформить заказ</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -135,15 +141,21 @@
             <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
           </div>
           <div class="header-middle-right-side">
-            <a href="#">
-              <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z" fill="#C5C5C5" />
-                <path
-                  d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z"
-                  fill="#C5C5C5" />
-              </svg>Войти
-            </a>
-            <a href="#">Регистрация</a>
+            <ul class="user-button-list index">
+              <li class="user-button-item">
+                <a href="#">
+                  <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.875 8.5L6 0V6H0V11H6V17L14.875 8.5Z" fill="#C5C5C5" />
+                    <path
+                      d="M16.986 15.01H11.959V17H16.986C19.164 17 19.99 15.19 20.015 13.974V3.028C19.99 1.811 19.164 0 16.986 0H11.959V1.99H16.986C17.825 1.99 17.978 2.671 17.996 3.047V13.951C17.979 14.327 17.825 15.01 16.986 15.01Z"
+                      fill="#C5C5C5" />
+                  </svg>Войти
+                </a>
+              </li>
+              <li>
+                <a class="user-button-item" href="#">Регистрация</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

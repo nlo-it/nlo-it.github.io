@@ -9,10 +9,8 @@
   <!-- <link rel="stylesheet" href="css/outlines.css"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cuprum:wght@400;700&family=PT+Sans:wght@400;700&display=swap"
-    rel="stylesheet">
-  <title>Интернет-магазин Техномарт. Продажа строительных материалов и инструментов для ремонта в Санкт-Петербурге.
-  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <title>Интернет-магазин Техномарт. Продажа строительных материалов и инструментов для ремонта в Санкт-Петербурге.</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <link rel="icon" type="image/png" sizes="16x16" href="img/png/favicons/16.png">
@@ -203,6 +201,7 @@
                 <div class="range-slider">
                   <div class="scale-and-toggles">
                     <!-- Здесь должен быть код шкалы ренж-фильтра -->
+                    <input type="range">
                   </div>
                   <div class="price-range">
                     <label class="first-range-label" for="first-range-toggle">
@@ -219,7 +218,7 @@
               </fieldset>
               <fieldset>
                 <legend>Производители:</legend>
-                <ul>
+                <ul class="checkbox-list">
                   <li>
                     <input type="checkbox" name="manufacturer-bosch" value="bosch" id="filter-manufacturer-bosch"
                       checked>
@@ -259,7 +258,7 @@
                 </ul>
               </fieldset>
             </fieldset>
-            <button type="button">Показать</button>
+            <button class="filter-btn" type="button">Показать</button>
           </form>
         </section>
 
@@ -268,11 +267,23 @@
           <section class="sorting">
             <h3>Сортировка:</h3>
             <ul class="sorting-list">
-              <li class="sorting-item"><a class="sorting-link">По цене</a></li>
+              <li class="sorting-item"><a class="sorting-link active-link">По цене</a></li>
               <li class="sorting-item"><a class="sorting-link" href="#">По типу</a></li>
               <li class="sorting-item"><a class="sorting-link" href="#">По функционалу</a></li>
-              <li class="sorting-item"><a class="sorting-link" href="#" title="Снизу вверх"></a></li>
-              <li class="sorting-item"><a class="sorting-link" href="#" title="Сверху вниз"></a></li>
+              <li class="sorting-item">
+                <a class="sorting-link-arrow active-link" href="#" title="Снизу вверх">
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 0L11 10L0 10" fill="#C5C5C5"/>
+                  </svg>
+                </a>
+              </li>
+              <li class="sorting-item">
+                <a class="sorting-link-arrow" href="#" title="Сверху вниз">
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 0L11 10L0 10" fill="#C5C5C5"/>
+                  </svg>
+                </a>
+              </li>
             </ul>
           </section>
           <ul class="product-list">

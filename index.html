@@ -10,12 +10,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+  <link rel="icon" href="img/svg/favicons/32.svg" type="image/svg+xml" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/png/favicons/apple.png"><!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
   <title>Интернет-магазин Техномарт. Продажа строительных материалов и инструментов для ремонта в Санкт-Петербурге.</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/png/favicons/16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/png/favicons/32.png">
-  <!-- <link rel="icon" type="apple-touch-icon" href="img/png/favicons/152.png"> -->
 </head>
 
 <body>
@@ -392,15 +393,15 @@
           <label class="services-bottom-warranty" for="warranty-id">Гарантия</label>
           <input class="visually-hidden" name="control-item-btn" type="radio" value="credit" id="credit-id">
           <label class="services-bottom-credit" for="credit-id">Кредит</label>
-          <div class="slide-style delivery-slide">
+          <section class="slide-style delivery-slide">
             <h3>Доставка</h3>
             <p>Мы с удовольствием доставим ваш товар прямо<br>
               к вашему подъезду совершенно бесплатно!<br>
               Ведь мы неплохо заработаем,<br>
               поднимая его на ваш этаж!</p>
             <img src="/img/png/sliders/slides/delivery-car.png" alt="Синий фургон доставки">
-          </div>
-          <div class="slide-style guarantee-slide">
+          </section>
+          <section class="slide-style guarantee-slide">
             <h3>Гарантия</h3>
             <p>Если купленный у нас товар поломается или заискрит,<br>
               а также в случае пожара, спровоцированного его<br>
@@ -408,14 +409,14 @@
               гарантии. Мы обменяем сгоревший товар на новый.<br>
               Дом уж восстановите как-нибудь сами.</p>
             <img src="/img/png/sliders/slides/guarantee.png" alt="Символ 100%-х гарантийных обязательств">
-          </div>
-          <div class="slide-style credit-slide">
+          </section>
+          <section class="slide-style credit-slide">
             <h3>Кредит</h3>
             <p>Залезть в долговую яму стало проще!<br>
               Кредитные консультанты придут вам на помощь.</p>
             <a class="btn" href="#" target="_blank">ОТПРАВИТЬ ЗАЯВКУ</a>
             <img src="/img/png/sliders/slides/credit.png" alt="Иконка кредитного договора">
-          </div>
+          </section>
         </div>
       </div>
     </section>
@@ -442,6 +443,10 @@
             <button type="button" class="map">
               <img src="img/png/others/map.png" alt="Интерактивная карта">
             </button>
+            <!-- Место для попапа с интерактивной картой -->
+            <!-- <div class="popup-map visually-hidden">
+              <button type="button" class="popup-close-btn visually-hidden"></button>
+            </div> -->
             <button type="button" class="btn">Заблудились? Напишите нам!</button>
           </div>
         </div>

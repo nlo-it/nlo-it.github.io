@@ -200,8 +200,18 @@
                 <legend>Цена:</legend>
                 <div class="range-slider">
                   <div class="scale-and-toggles">
-                    <!-- Здесь должен быть код шкалы ренж-фильтра -->
-                    <input type="range">
+                    <div class="scale">
+                      <span class="scale-gray"></span>
+                      <span class="scale-green"></span>
+                    </div>
+                    <div class="toggles">
+                      <label for="first-scale-toggle">
+                        <input type="range" min="0" max="30000" step="1" id="first-scale-toggle">
+                      </label>
+                      <label for="second-scale-toggle">
+                        <input type="range" min="0" max="30000" step="1" id="second-scale-toggle">
+                      </label>
+                    </div>
                   </div>
                   <div class="price-range">
                     <label class="first-range-label" for="first-range-toggle">

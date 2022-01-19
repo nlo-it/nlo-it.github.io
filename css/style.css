@@ -1683,6 +1683,7 @@ h1.catalog {
   margin-bottom: 14px;
   background-color: #F7F3EC;
   color: #000000;
+  border-radius: 3px;
 }
 
 .filters fieldset:nth-child(2) > legend {
@@ -1704,6 +1705,7 @@ h1.catalog {
   position: relative;
   background-color: #F7F3EC;
   margin-bottom: 9px;
+  border-radius: 3px;
 }
 
 .scale-gray,
@@ -1722,6 +1724,61 @@ h1.catalog {
 .scale-green {
   width: 152px;
   background-color: #63A63E;
+}
+
+.toggles {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  left: 0;
+  top: 37px;
+}
+
+.first-toggle-scale,
+.second-toggle-scale {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 0 0 rgba(171, 171, 171, 0.3);
+  cursor: pointer;
+}
+
+.first-toggle-scale {
+  left: 18px;
+  top: -8px;
+}
+
+.second-toggle-scale {
+  left: 160px;
+  top: -8px;
+}
+
+.first-toggle-scale::before,
+.second-toggle-scale::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #ABABAB;
+}
+
+.first-toggle-scale::before {
+  left: 8px;
+  top: 8px;
+}
+
+.second-toggle-scale::before {
+  right: 8px;
+  top: 8px;
+}
+
+.first-toggle-scale:active,
+.second-toggle-scale:active {
+  opacity: 0.9;
 }
 
 .price-range {
@@ -1761,24 +1818,29 @@ h1.catalog {
 
 .first-range-label,
 .second-range-label {
-  display: flex;
-  align-items: center;
   width: 95px;
   height: 100%;
-  background-color: #F7F3EC;
-  border-radius: 3px;
-  box-sizing: border-box;
 }
 
 .first-range-input,
 .second-range-input {
+  width: 95px;
+  height: 100%;
   font-size: 17px;
   line-height: 18px;
   text-align: center;
   color: #000000;
   background-color: #F7F3EC;
+  box-sizing: border-box;
   border: none;
+  border-radius: 3px;
   margin: 0 auto;
+  padding: 10px;
+}
+
+.first-range-input:focus,
+.second-range-input:focus {
+  border: 2px solid black;
 }
 
 /* Скрываем стрелочки у input-ов */
@@ -1918,6 +1980,7 @@ input[type="number"] {
   margin-right: auto;
   margin-bottom: 28px;
   background-color: #F7F3EC;
+  border-radius: 3px;
 }
 
 .sorting h3 {

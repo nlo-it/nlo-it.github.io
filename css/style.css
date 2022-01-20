@@ -90,6 +90,7 @@ header {
   width: 220px;
   height: 47px;
   position: absolute;
+  top: 0;
   left: 0;
 }
 
@@ -691,13 +692,13 @@ input[type="number"]:focus::-moz-placeholder {
 }
 
 .left-arrow::before {
-  background: url("/img/svg/icon-left-arrow.svg") no-repeat;
+  background: url("/img/svg/icons/icon-left-arrow.svg") no-repeat;
   left: 24px;
   top: 141px;
 }
 
 .right-arrow::after {
-  background: url("/img/svg/icon-right-arrow.svg") no-repeat;
+  background: url("/img/svg/icons/icon-right-arrow.svg") no-repeat;
   left: 582px;
   top: 141px;
 }
@@ -723,13 +724,13 @@ input[type="number"]:focus::-moz-placeholder {
 .first-slide-content {
   width: 100%;
   height: 100%;
-  background: url("/img/jpg/sliders/slides/first-slide-background.jpg") no-repeat;
+  background: url("/img/jpg/sliders/main-slider/first-slide-background.jpg") no-repeat;
 }
 
 .second-slide-content {
   width: 100%;
   height: 100%;
-  background: url("/img/jpg/sliders/slides/second-slide-background.jpg") no-repeat;
+  background: url("/img/jpg/sliders/main-slider/second-slide-background.jpg") no-repeat;
 }
 
 .services-item-slider h3 {
@@ -888,7 +889,7 @@ input[type="number"]:focus::-moz-placeholder {
   height: 15px;
   top: 10px;
   left: 30px;
-  background: url("/img/svg/icon-cart.svg") no-repeat;
+  background: url("/img/svg/icons/icon-cart.svg") no-repeat;
   opacity: 0.3;
 }
 
@@ -1623,7 +1624,7 @@ a.catalog {
 .bread-crumbs-item:first-child a {
   width: 14px;
   height: 12px;
-  background: url("/img/svg/icon-home.svg") no-repeat;
+  background: url("/img/svg/icons/icon-home.svg") no-repeat;
 }
 
 .bread-crumbs-item:first-child a::after {
@@ -1631,7 +1632,7 @@ a.catalog {
   position: absolute;
   width: 8px;
   height: 12px;
-  background: url("/img/svg/icon-small-arrow.svg") no-repeat;
+  background: url("/img/svg/icons/icon-small-arrow.svg") no-repeat;
   left: 30px;
   pointer-events: none;
 }
@@ -1641,7 +1642,7 @@ a.catalog {
   position: absolute;
   width: 8px;
   height: 12px;
-  background: url("/img/svg/icon-small-arrow.svg") no-repeat;
+  background: url("/img/svg/icons/icon-small-arrow.svg") no-repeat;
   margin-left: 17px;
   top: 7px;
   pointer-events: none;

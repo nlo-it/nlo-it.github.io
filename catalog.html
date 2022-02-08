@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/cuprum.woff2" as="font">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -76,15 +77,15 @@
         <nav class="header-navigation">
           <ul class="clear-list header-nav-list">
             <li class="header-nav-item">
-              <a href="#">
-                <svg class="bookmarks catalog" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a class="header-nav-link bookmarks-link" href="#">
+                <svg class="bookmarks" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z" fill="white" />
                 </svg>Закладки: <span>0</span>
               </a>
             </li>
             <li class="header-nav-item">
-              <a class="header-user-action" href="#">
-                <svg class="basket catalog" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a class="header-nav-link basket-link basket-link-action" href="#">
+                <svg class="basket basket-action" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="white" />
                   <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white" />
                   <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white" />
@@ -92,7 +93,7 @@
               </a>
             </li>
             <li class="header-nav-item">
-              <a href="#">Оформить заказ</a>
+              <a class="header-nav-link order-link" href="#">Оформить заказ</a>
             </li>
           </ul>
         </nav>
@@ -144,7 +145,7 @@
           </li>
         </ul>
       </div>
-      <div class="container header-bottom catalog">
+      <div class="container header-bottom">
         <nav class="main-navigation">
           <ul class="clear-list navigation-list">
             <li class="navigation-item"><a class="main-btn" href="index.html">Главная</a></li>
@@ -163,14 +164,14 @@
     <div class="container">
       <div class="paginated-navigation">
         <ul class="clear-list bread-crumbs-list">
-          <li class="bread-crumbs-item"><a href="index.html" title="Главная"></a></li>
-          <li class="bread-crumbs-item"><a title="Каталог">Каталог</a></li>
-          <li class="bread-crumbs-item"><a href="blank.html" title="Инструмент">Инструмент</a></li>
-          <li class="bread-crumbs-item"><a title="Перфораторы">Перфораторы</a></li>
+          <li class="bread-crumbs-item"><a class="bread-crumbs-link bc-home-icon" href="index.html" title="Главная"></a></li>
+          <li class="bread-crumbs-item"><a class="bread-crumbs-link" title="Каталог">Каталог</a></li>
+          <li class="bread-crumbs-item"><a class="bread-crumbs-link" href="blank.html" title="Инструмент">Инструмент</a></li>
+          <li class="bread-crumbs-item"><a class="bread-crumbs-link" title="Перфораторы">Перфораторы</a></li>
         </ul>
       </div>
       <h1 class="heading catalog">Перфораторы</h1>
-      <div class="catalog-positioning">
+      <div class="catalog-grid">
         <section class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form method="get" action="#">
@@ -295,7 +296,7 @@
               <div class="three-item-top-side">
                 <img src="img/jpg/products/perforators/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор bosch bfg 6000">
                 <button class="btn buy-btn" type="button">Купить</button>
-                <button class="btn add-bookmarks" type="button">В закладки</button>
+                <button class="btn add-bookmarks-btn" type="button">В закладки</button>
               </div>
               <div class="three-item-bottom-side">
                 <a class="product-name-link" href="#">
@@ -309,7 +310,7 @@
               <div class="three-item-top-side">
                 <img src="img/jpg/products/perforators/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор bosch bfg 6000">
                 <button class="btn buy-btn" type="button">Купить</button>
-                <button class="btn add-bookmarks" type="button">В закладки</button>
+                <button class="btn add-bookmarks-btn" type="button">В закладки</button>
               </div>
               <div class="three-item-bottom-side">
                 <a class="product-name-link" href="#">
@@ -323,7 +324,7 @@
               <div class="three-item-top-side promo-sticker">
                 <img src="img/jpg/products/perforators/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор bosch bfg 6000">
                 <button class="btn buy-btn" type="button">Купить</button>
-                <button class="btn add-bookmarks" type="button">В закладки</button>
+                <button class="btn add-bookmarks-btn" type="button">В закладки</button>
               </div>
               <div class="three-item-bottom-side">
                 <a class="product-name-link" href="#">
@@ -337,7 +338,7 @@
               <div class="second-item-top-side promo-sticker">
                 <img src="img/jpg/products/perforators/bosch-bfg-3000.jpg" width="127" height="112" alt="Перфоратор bosch bfg 3000">
                 <button class="btn buy-btn" type="button">Купить</button>
-                <button class="btn add-bookmarks" type="button">В закладки</button>
+                <button class="btn add-bookmarks-btn" type="button">В закладки</button>
               </div>
               <div class="second-item-bottom-side">
                 <a class="product-name-link" href="#">
@@ -351,7 +352,7 @@
               <div class="three-item-top-side">
                 <img src="img/jpg/products/perforators/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор bosch bfg 6000">
                 <button class="btn buy-btn" type="button">Купить</button>
-                <button class="btn add-bookmarks" type="button">В закладки</button>
+                <button class="btn add-bookmarks-btn" type="button">В закладки</button>
               </div>
               <div class="three-item-bottom-side">
                 <a class="product-name-link" href="#">
@@ -365,7 +366,7 @@
               <div class="four-item-top-side promo-sticker">
                 <img src="img/jpg/products/perforators/bosch-bfg-2000.jpg" width="127" height="112" alt="Перфоратор bosch bfg 2000">
                 <button class="btn buy-btn" type="button">Купить</button>
-                <button class="btn add-bookmarks" type="button">В закладки</button>
+                <button class="btn add-bookmarks-btn" type="button">В закладки</button>
               </div>
               <div class="four-item-bottom-side">
                 <a class="product-name-link" href="#">
@@ -379,7 +380,7 @@
               <div class="second-item-top-side promo-sticker">
                 <img src="img/jpg/products/perforators/bosch-bfg-3000.jpg" width="127" height="112" alt="Перфоратор bosch bfg 3000">
                 <button class="btn buy-btn" type="button">Купить</button>
-                <button class="btn add-bookmarks" type="button">В закладки</button>
+                <button class="btn add-bookmarks-btn" type="button">В закладки</button>
               </div>
               <div class="second-item-bottom-side">
                 <a class="product-name-link" href="#">
@@ -393,7 +394,7 @@
               <div class="three-item-top-side">
                 <img src="img/jpg/products/perforators/bosch-bfg-6000.jpg" width="144" height="128" alt="Перфоратор bosch bfg 6000">
                 <button class="btn buy-btn" type="button">Купить</button>
-                <button class="btn add-bookmarks" type="button">В закладки</button>
+                <button class="btn add-bookmarks-btn" type="button">В закладки</button>
               </div>
               <div class="three-item-bottom-side">
                 <a class="product-name-link" href="#">
@@ -407,7 +408,7 @@
               <div class="four-item-top-side promo-sticker">
                 <img src="img/jpg/products/perforators/bosch-bfg-2000.jpg" width="127" height="112" alt="Перфоратор bosch bfg 2000">
                 <button class="btn buy-btn" type="button">Купить</button>
-                <button class="btn add-bookmarks" type="button">В закладки</button>
+                <button class="btn add-bookmarks-btn" type="button">В закладки</button>
               </div>
               <div class="four-item-bottom-side">
                 <a class="product-name-link" href="#">

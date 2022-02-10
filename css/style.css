@@ -264,8 +264,6 @@ img {
   justify-content: space-between; */
   /* align-items: center; */
   margin-bottom: 59px;
-  outline: 2px solid rgba(0, 26, 255, 0.7);
-  outline-offset: -2px;
 
   display: grid;
   grid-template-rows: auto 1fr 60px;
@@ -289,8 +287,6 @@ img {
   justify-content: space-between;
   align-items: center; */
 
-  outline: 2px solid rgba(0, 255, 34, 0.7);
-  outline-offset: -2px;
   display: grid;
   grid-template-columns: auto auto 1fr;
 }
@@ -302,8 +298,6 @@ img {
   /* Возможно, justify-self здесь лишнее */
   height: 47px;
   justify-self: start;
-  outline: 2px solid rgba(0, 238, 255, 0.7);
-  outline-offset: -2px;
 }
 
 .header-logo:active rect {
@@ -317,8 +311,6 @@ img {
   /* align-self: flex-start; */
 
   justify-self: start;
-  outline: 2px solid rgba(0, 238, 255, 0.7);
-  outline-offset: -2px;
 }
 
 .search-form__input {
@@ -384,8 +376,6 @@ input[type="number"]:focus::-moz-placeholder {
   height: 42px;
 
   justify-self: end;
-  outline: 2px solid rgba(0, 238, 255, 0.7);
-  outline-offset: -2px;
  }
 
 .main-header-nav-list {
@@ -478,8 +468,6 @@ input[type="number"]:focus::-moz-placeholder {
   align-items: center; */
   margin-bottom: 40px;
 
-  outline: 2px solid rgba(0, 255, 98, 0.7);
-  outline-offset: -2px;
   display: grid;
   grid-template-columns: auto 1fr auto;
 }
@@ -495,8 +483,6 @@ input[type="number"]:focus::-moz-placeholder {
   margin-bottom: auto;
 
   justify-self: start;
-  outline: 2px solid rgba(0, 238, 255, 0.7);
-  outline-offset: -2px;
 }
 
 .header-contacts {
@@ -505,8 +491,6 @@ input[type="number"]:focus::-moz-placeholder {
   margin-left: 93px;
 
   justify-self: start;
-  outline: 2px solid rgba(0, 238, 255, 0.7);
-  outline-offset: -2px;
 }
 
 .contacts-phone {
@@ -521,9 +505,6 @@ input[type="number"]:focus::-moz-placeholder {
   display: inline-block;
   overflow: hidden;
   padding: 4px 48px 5px 70px;
-
-  outline: 2px solid rgba(0, 238, 255, 0.7);
-  outline-offset: -2px;
 }
 
 .contacts-phone:hover {
@@ -562,9 +543,6 @@ input[type="number"]:focus::-moz-placeholder {
   justify-content: flex-end;
   align-items: flex-start;
   flex-wrap: wrap;
-
-  outline: 2px solid rgba(0, 238, 255, 0.7);
-  outline-offset: -2px;
 }
 
 .user-button-item {
@@ -625,8 +603,6 @@ input[type="number"]:focus::-moz-placeholder {
   position: absolute;
   top: 13px;
   left: 15px;
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .user-logged .user-button-item:nth-child(2),
@@ -682,9 +658,6 @@ input[type="number"]:focus::-moz-placeholder {
   position: absolute;
   top: 0;
   right: 0;
-
-  outline: 1px solid red;
-  outline-offset: -1px;
 }
 
 .user-logout-link svg {
@@ -1014,10 +987,14 @@ input[type="number"]:focus::-moz-placeholder {
 .popular-header {
   height: 89px;
   background-color: var(--floral-white);
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: relative; */
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-items: end;
   margin-bottom: 20px;
 }
 
@@ -1033,6 +1010,8 @@ input[type="number"]:focus::-moz-placeholder {
   color: var(--dark-blue);
   text-transform: uppercase;
   padding-left: 28px;
+
+  align-self: center;
 }
 
 .popular-products {
@@ -1042,7 +1021,7 @@ input[type="number"]:focus::-moz-placeholder {
 .popular-products-list {
   display: grid;
   grid-template-columns: repeat(4, 220px);
-  grid-template-rows: repeat(4, 318px);
+  grid-template-rows: 318px;
   gap: 20px;
 }
 
@@ -1203,19 +1182,17 @@ input[type="number"]:focus::-moz-placeholder {
   margin-bottom: 70px;
 }
 
-.brands > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 .brands-header {
   height: 89px;
   background-color: var(--floral-white);
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: relative; */
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-items: end;
   margin-bottom: 20px;
 }
 
@@ -1235,6 +1212,7 @@ input[type="number"]:focus::-moz-placeholder {
   width: 100%;
   background-color: var(--white);
   border: 1px solid var(--magnolia);
+
   display: grid;
   justify-items: center;
   align-items: center;
@@ -1259,6 +1237,9 @@ input[type="number"]:focus::-moz-placeholder {
   max-height: 522px;
   padding: 64px 0 54px 0;
   margin-bottom: 70px;
+
+  display: grid;
+  grid-template-rows: auto auto 334px;
 }
 
 .service h3 {
@@ -1382,9 +1363,13 @@ input[type="number"]:focus::-moz-placeholder {
 }
 
 .info > div {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-start; */
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  justify-items: end;
 }
 
 .info h3 {
@@ -1395,10 +1380,12 @@ input[type="number"]:focus::-moz-placeholder {
 .contacts {
   width: 470px;
   height: 356px;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-start; */
+
+  display: grid;
 }
 
 .about-company p:first-of-type {
@@ -1463,11 +1450,19 @@ input[type="number"]:focus::-moz-placeholder {
 
 .main-footer {
   max-height: 300px;
+
+  display: grid;
+  grid-template-rows: 2fr 1fr;
 }
 
-.main-footer-top-wrapper,
-.main-footer-middle-wrapper {
+.main-footer-top-wrapper {
   background-color: var(--dark-blue);
+}
+
+.main-footer-top-wrapper > div,
+.main-footer-bottom-wrapper > div {
+  display: grid;
+  grid-template-columns: auto;
 }
 
 .main-footer-bottom-wrapper {
@@ -1490,7 +1485,7 @@ input[type="number"]:focus::-moz-placeholder {
 }
 
 .main-footer-middle {
-  height: 116px;
+  height: 125px;
 }
 
 .main-footer-bottom {

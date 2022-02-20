@@ -801,19 +801,6 @@ input[type="number"]:focus::-moz-placeholder {
   background-color: var(--dark-grey);
 }
 
-.promo-item:last-child {
-  width: 620px;
-  height: 266px;
-  grid-column: 1 / 3;
-  grid-row: 2 / 4;
-}
-
-.promo-item:last-child a {
-  position: absolute;
-  bottom: 27px;
-  left: 24px;
-}
-
 /*Красный стикер с надписью: "NEW"*/
 .promo-sticker::after {
   content: "NEW";
@@ -830,6 +817,19 @@ input[type="number"]:focus::-moz-placeholder {
   position: absolute;
   top: 10px;
   right: -40px;
+}
+
+.main-slider {
+  width: 620px;
+  height: 266px;
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+}
+
+.main-slider a {
+  position: absolute;
+  bottom: 27px;
+  left: 24px;
 }
 
 .slider-toggle,
@@ -918,8 +918,8 @@ input[type="number"]:focus::-moz-placeholder {
   top: 141px;
 }
 
-#first-slide:checked ~ .promo-slider-list .first-slide-content,
-#second-slide:checked ~ .promo-slider-list .second-slide-content {
+#first-slide:checked ~ .promo-slider-list .first-slide,
+#second-slide:checked ~ .promo-slider-list .second-slide {
   visibility: visible;
 }
 
@@ -927,22 +927,22 @@ input[type="number"]:focus::-moz-placeholder {
   width: 620px;
   height: 266px;
   position: relative;
-  visibility: hidden;
 }
 
-.promo-slider-list li {
+.promo-slider-item {
   width: 100%;
   height: 100%;
+  visibility: hidden;
   position: absolute;
 }
 
-.first-slide-content {
+.promo-slider-item.first-slide {
   width: 100%;
   height: 100%;
   background: var(--dark-blue) url("/img/jpg/sliders/promo-slider/first-slide-background.jpg") no-repeat;
 }
 
-.second-slide-content {
+.promo-slider-item.second-slide {
   width: 100%;
   height: 100%;
   background: var(--dark-blue) url("/img/jpg/sliders/promo-slider/second-slide-background.jpg") no-repeat;

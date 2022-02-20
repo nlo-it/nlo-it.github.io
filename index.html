@@ -214,30 +214,26 @@
               <img src="img/svg/promo/fast-delivery.svg" width="78" height="63" alt="Иконка фургона - символизирует раздел по доставке">
             </div>
           </li>
-          <li class="promo-item main-slider">
-            <div class="promo-slider">
+          <li class="promo-item promo-slider">
+            <div class="promo-slider-content">
               <input class="visually-hidden" name="slide" type="radio" id="first-slide" checked>
               <input class="visually-hidden" name="slide" type="radio" id="second-slide">
-              <div class="slider-toggle">
-                <label class="first-toggle" for="first-slide"></label>
-                <label class="second-toggle" for="second-slide"></label>
-              </div>
+              <label class="first-toggle" for="first-slide"></label>
+              <label class="second-toggle" for="second-slide"></label>
               <div class="slider-control">
                 <label class="left-arrow" for="first-slide"></label>
                 <label class="right-arrow" for="second-slide"></label>
               </div>
-              <ul class="clear-list promo-slider-list">
-                <li class="promo-slider-item first-slide">
-                  <h3 class="clear">Перфораторы</h3>
-                  <p class="clear-text">Настоящие мужские игрушки</p>
-                  <a class="btn" href="catalog.html" target="_blank" title="Каталог перфораторов">Открыть каталог</a>
-                </li>
-                <li class="promo-slider-item second-slide">
-                  <h3 class="clear">Дрели</h3>
-                  <p class="clear-text">Соседям на радость!</p>
-                  <a class="btn" href="catalog.html" target="_blank" title="Каталог перфораторов">Открыть каталог</a>
-                </li>
-              </ul>
+              <div class="slider-slides first-slide">
+                <h3 class="clear">Перфораторы</h3>
+                <p class="clear-text">Настоящие мужские игрушки</p>
+                <a class="btn" href="catalog.html" target="_blank" title="Каталог перфораторов">Открыть каталог</a>
+              </div>
+              <div class="slider-slides second-slide">
+                <h3 class="clear">Дрели</h3>
+                <p class="clear-text">Соседям на радость!</p>
+                <a class="btn" href="catalog.html" target="_blank" title="Каталог перфораторов">Открыть каталог</a>
+              </div>
             </div>
           </li>
         </ul>
@@ -510,7 +506,7 @@
     <div class="modal-map-content">
       <img src="img/jpg/others/modal-map.jpg" width="943" height="449" alt="Интерактивная карта - месторасположение компании Техномарт">
     </div>
-    <button class="clear-btn close-btn" type="button" value="Закрыть" onClick=history.back()>
+    <button class="clear-btn close-btn" type="button" value="Закрыть" onClick="history.back()">
       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z" fill="#EE3643"/>
       </svg>
@@ -537,7 +533,7 @@
       <p class="clear-text submit-btn-wrapper">
         <button class="clear-btn btn submit-btn" type="submit">Отправить</button>
       </p>
-      <button class="clear-btn close-btn" type="button" value="Закрыть" onClick=history.back()>
+      <button class="clear-btn close-btn" type="button" value="Закрыть" onClick="history.back()">
         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z" fill="#EE3643"/>
         </svg>
@@ -553,7 +549,7 @@
       <a class="btn add-item-btn" href="#">Оформить заказ</a>
       <button class="btn add-item-btn" type="button">Продолжить покупки</button>
     </p>
-    <button class="clear-btn close-btn" type="button" value="Закрыть" onClick=history.back()>
+    <button class="clear-btn close-btn" type="button" value="Закрыть" onClick="history.back()">
       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z" fill="#EE3643"/>
       </svg>
@@ -572,14 +568,14 @@
         <input class="login-icon-password" type="password" id="login-password" name="login" placeholder="••••••••" autocomplete="off" required>
       </p>
       <p class="clear-text login-help">
-        <input type="checkbox" id="user-remember" name="remember" checked>
-        <label for="user-remember" class="login-checkbox">Запомните меня</label>
-        <a class="restore" href="#">Я забыл пароль!</a>
+        <input class="modal-checkbox" type="checkbox" id="user-remember" name="remember" checked>
+        <label class="modal-checkbox-label" for="user-remember" class="login-checkbox">Запомните меня</label>
+        <a class="modal-restore-password" href="#">Я забыл пароль!</a>
       </p>
       <p class="clear-text submit-btn-wrapper">
         <button class="clear-btn btn submit-btn" type="submit">Войти</button>
       </p>
-      <button class="clear-btn close-btn" type="button" value="Закрыть" onClick=history.back()>
+      <button class="clear-btn close-btn" type="button" value="Закрыть" onClick="history.back()">
         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z" fill="#EE3643"/>
         </svg>

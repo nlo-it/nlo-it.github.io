@@ -167,14 +167,24 @@
     <div class="container">
       <div class="bread-crumbs">
         <ul class="clear-list bread-crumbs-list">
-          <li class="bread-crumbs-item"><a class="bread-crumbs-link bc-home-icon" href="index.html" title="Главная"></a></li>
-          <li class="bread-crumbs-item"><a class="bread-crumbs-link" title="Каталог">Каталог</a></li>
-          <li class="bread-crumbs-item"><a class="bread-crumbs-link" href="blank.html" title="Инструмент">Инструмент</a></li>
-          <li class="bread-crumbs-item"><a class="bread-crumbs-link" title="Перфораторы">Перфораторы</a></li>
+          <li class="bread-crumbs-item">
+            <a class="bread-crumbs-link" href="index.html" title="Главная"></a>
+          </li>
+          <li class="bread-crumbs-item">
+            <a class="bread-crumbs-link" title="Каталог">Каталог</a>
+          </li>
+          <li class="bread-crumbs-item">
+            <a class="bread-crumbs-link" href="blank.html" title="Инструмент">Инструмент</a>
+          </li>
+          <li class="bread-crumbs-item bread-crumbs-current">
+            <a class="bread-crumbs-link" title="Перфораторы">Перфораторы</a>
+          </li>
         </ul>
       </div>
+
       <h1 class="heading">Перфораторы</h1>
       <div class="catalog-grid">
+
         <section class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form method="get" action="#">
@@ -204,22 +214,20 @@
                         </svg>
                       </button>
                       <label for="first-scale-toggle">
-                        <input type="range" min="0" max="30000" step="1" id="first-scale-toggle">
+                        <input class="filter-range" type="range" min="0" max="30000" step="1" id="first-scale-toggle">
                       </label>
                       <label for="second-scale-toggle">
-                        <input type="range" min="0" max="30000" step="1" id="second-scale-toggle">
+                        <input class="filter-range" type="range" min="0" max="30000" step="1" id="second-scale-toggle">
                       </label>
                     </div>
                   </div>
                   <div class="price-range">
-                    <label class="first-range-label" for="first-range-toggle">
-                      <input class="first-range-input" type="number" min="0" max="30000" step="1"
-                        name="first-range-toggle" placeholder="0" id="first-range-toggle">
+                    <label class="first-number-label" for="first-range-toggle">
+                      <input class="filter-number" type="number" min="0" max="30000" step="1" name="first-range-toggle" placeholder="0" id="first-range-toggle">
                     </label>
                     <span class="defis">—</span>
-                    <label class="second-range-label" for="second-range-toggle">
-                      <input class="second-range-input" type="number" min="0" max="30000" step="1"
-                        name="second-range-toggle" placeholder="30000" id="second-range-toggle">
+                    <label class="second-number-label" for="second-range-toggle">
+                      <input class="filter-number" type="number" min="0" max="30000" step="1" name="second-range-toggle" placeholder="30000" id="second-range-toggle">
                     </label>
                   </div>
                 </div>
@@ -228,27 +236,24 @@
                 <legend>Производители:</legend>
                 <ul class="clear-list checkbox-list">
                   <li class="checkbox-item">
-                    <input type="checkbox" name="manufacturer-bosch" value="bosch" id="filter-manufacturer-bosch"
-                      checked>
-                    <label for="filter-manufacturer-bosch">Bosch</label>
+                    <input class="filter-checkbox" type="checkbox" name="manufacturer-bosch" value="bosch" id="filter-manufacturer-bosch" checked>
+                    <label class="filter-checkbox-label" for="filter-manufacturer-bosch">Bosch</label>
                   </li>
                   <li class="checkbox-item">
-                    <input type="checkbox" name="manufacturer-interskol" value="interskol"
-                      id="filter-manufacturer-interskol">
-                    <label for="filter-manufacturer-interskol">Интерскол</label>
+                    <input class="filter-checkbox" type="checkbox" name="manufacturer-interskol" value="interskol" id="filter-manufacturer-interskol">
+                    <label class="filter-checkbox-label" for="filter-manufacturer-interskol">Интерскол</label>
                   </li>
                   <li class="checkbox-item">
-                    <input type="checkbox" name="manufacturer-makita" value="makita" id="filter-manufacturer-makita"
-                      checked>
-                    <label for="filter-manufacturer-makita">Makita</label>
+                    <input class="filter-checkbox" type="checkbox" name="manufacturer-makita" value="makita" id="filter-manufacturer-makita" checked>
+                    <label class="filter-checkbox-label" for="filter-manufacturer-makita">Makita</label>
                   </li>
                   <li class="checkbox-item">
-                    <input type="checkbox" name="manufacturer-dewalt" value="dewalt" id="filter-manufacturer-dewalt">
-                    <label for="filter-manufacturer-dewalt">Dewalt</label>
+                    <input class="filter-checkbox" type="checkbox" name="manufacturer-dewalt" value="dewalt" id="filter-manufacturer-dewalt">
+                    <label class="filter-checkbox-label" for="filter-manufacturer-dewalt">Dewalt</label>
                   </li>
                   <li class="checkbox-item">
-                    <input type="checkbox" name="manufacturer-hitachi" value="hitachi" id="filter-manufacturer-hitachi">
-                    <label for="filter-manufacturer-hitachi">Hitachi</label>
+                    <input class="filter-checkbox" type="checkbox" name="manufacturer-hitachi" value="hitachi" id="filter-manufacturer-hitachi">
+                    <label class="filter-checkbox-label" for="filter-manufacturer-hitachi">Hitachi</label>
                   </li>
                 </ul>
               </fieldset>
@@ -256,11 +261,11 @@
                 <legend>Питание:</legend>
                 <ul class="clear-list radio-list">
                   <li>
-                    <input type="radio" name="type-power-supply" value="battery" id="filter-battery" checked>
+                    <input class="filter-radio" type="radio" name="type-power-supply" value="battery" id="filter-battery" checked>
                     <label for="filter-battery">Аккумуляторные</label>
                   </li>
                   <li>
-                    <input type="radio" name="type-power-supply" value="network" id="filter-network">
+                    <input class="filter-radio" type="radio" name="type-power-supply" value="network" id="filter-network">
                     <label for="filter-network">Сетевые</label>
                   </li>
                 </ul>
@@ -528,7 +533,7 @@
     <div class="modal-map-content">
       <img src="img/jpg/others/modal-map.jpg" width="943" height="449" alt="Интерактивная карта - месторасположение компании Техномарт">
     </div>
-    <button class="clear-btn close-btn" type="button" value="Закрыть" onClick=history.back()>
+    <button class="clear-btn close-btn" type="button" value="Закрыть" onClick="history.back()">
       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z" fill="#EE3643"/>
       </svg>
@@ -555,7 +560,7 @@
       <p class="clear-text submit-btn-wrapper">
         <button class="clear-btn btn submit-btn" type="submit">Отправить</button>
       </p>
-      <button class="clear-btn close-btn" type="button" value="Закрыть" onClick=history.back()>
+      <button class="clear-btn close-btn" type="button" value="Закрыть" onClick="history.back()">
         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z" fill="#EE3643"/>
         </svg>
@@ -571,7 +576,7 @@
       <a class="btn add-item-btn" href="#">Оформить заказ</a>
       <button class="btn add-item-btn" type="button">Продолжить покупки</button>
     </p>
-    <button class="clear-btn close-btn" type="button" value="Закрыть" onClick=history.back()>
+    <button class="clear-btn close-btn" type="button" value="Закрыть" onClick="history.back()">
       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z" fill="#EE3643"/>
       </svg>
@@ -582,22 +587,22 @@
     <h2 class="heading">Личный кабинет</h2>
     <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
       <p class="clear-text">
-        <label for="login-login">Логин:</label>
-        <label for="login-password">Пароль:</label>
+        <label class="modal-login-label" for="login-login">Логин:</label>
+        <label class="modal-password-label" for="login-password">Пароль:</label>
       </p>
       <p class="clear-text">
-        <input class="login-icon-user" type="email" id="login-login" name="login" placeholder="email@example.com" autocomplete="off" required>
-        <input class="login-icon-password" type="password" id="login-password" name="login" placeholder="••••••••" autocomplete="off" required>
+        <input class="modal-login-input login-icon-user" type="email" id="login-login" name="login" placeholder="email@example.com" autocomplete="off" required>
+        <input class="modal-password-input" type="password" id="login-password" name="login" placeholder="••••••••" autocomplete="off" required>
       </p>
       <p class="clear-text login-help">
-        <input type="checkbox" id="user-remember" name="remember" checked>
-        <label for="user-remember" class="login-checkbox">Запомните меня</label>
-        <a class="restore" href="#">Я забыл пароль!</a>
+        <input class="modal-checkbox visually-hidden" type="checkbox" id="user-remember" name="remember" checked>
+        <label class="modal-checkbox-label" for="user-remember" class="login-checkbox">Запомните меня</label>
+        <a class="modal-restore-password" href="#">Я забыл пароль!</a>
       </p>
       <p class="clear-text submit-btn-wrapper">
         <button class="clear-btn btn submit-btn" type="submit">Войти</button>
       </p>
-      <button class="clear-btn close-btn" type="button" value="Закрыть" onClick=history.back()>
+      <button class="clear-btn close-btn" type="button" value="Закрыть" onClick="history.back()">
         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z" fill="#EE3643"/>
         </svg>

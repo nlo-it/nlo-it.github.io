@@ -180,7 +180,9 @@
       <div class="cloud" data-type="white_5" style="top: 38%;" data-speed="5"></div>
       <div class="cloud" data-type="white_6" style="top: 50%;" data-speed="7"></div>
       <div class="message">Мы уже работаем над созданием этой страницы!</br>
-        <form><input class="button-close" type="button" value="Закрыть" onClick=history.back()></form>
+        <form>
+          <input class="button-close" type="button" value="Закрыть" onClick="history.back()">
+        </form>
       </div>
     </div>
 
@@ -266,7 +268,7 @@
     <div class="modal-map-content">
       <img src="img/jpg/others/modal-map.jpg" width="943" height="449" alt="Интерактивная карта - месторасположение компании Техномарт">
     </div>
-    <button class="clear-btn close-btn" type="button" value="Закрыть" onClick=history.back()>
+    <button class="clear-btn close-btn" type="button" value="Закрыть" onClick="history.back()">
       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z" fill="#EE3643"/>
       </svg>
@@ -293,7 +295,7 @@
       <p class="clear-text submit-btn-wrapper">
         <button class="clear-btn btn submit-btn" type="submit">Отправить</button>
       </p>
-      <button class="clear-btn close-btn" type="button" value="Закрыть" onClick=history.back()>
+      <button class="clear-btn close-btn" type="button" value="Закрыть" onClick="history.back()">
         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z" fill="#EE3643"/>
         </svg>
@@ -309,7 +311,7 @@
       <a class="btn add-item-btn" href="#">Оформить заказ</a>
       <button class="btn add-item-btn" type="button">Продолжить покупки</button>
     </p>
-    <button class="clear-btn close-btn" type="button" value="Закрыть" onClick=history.back()>
+    <button class="clear-btn close-btn" type="button" value="Закрыть" onClick="history.back()">
       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z" fill="#EE3643"/>
       </svg>
@@ -328,14 +330,14 @@
         <input class="login-icon-password" type="password" id="login-password" name="login" placeholder="••••••••" autocomplete="off" required>
       </p>
       <p class="clear-text login-help">
-        <input type="checkbox" id="user-remember" name="remember" checked>
-        <label for="user-remember" class="login-checkbox">Запомните меня</label>
-        <a class="restore" href="#">Я забыл пароль!</a>
+        <input class="modal-checkbox" type="checkbox" id="user-remember" name="remember" checked>
+        <label class="modal-checkbox-label" for="user-remember" class="login-checkbox">Запомните меня</label>
+        <a class="modal-restore-password" href="#">Я забыл пароль!</a>
       </p>
       <p class="clear-text submit-btn-wrapper">
         <button class="clear-btn btn submit-btn" type="submit">Войти</button>
       </p>
-      <button class="clear-btn close-btn" type="button" value="Закрыть" onClick=history.back()>
+      <button class="clear-btn close-btn" type="button" value="Закрыть" onClick="history.back()">
         <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M13.2729 10.4999L20.6949 3.07793C21.0839 2.68893 21.0839 2.05293 20.6949 1.66393L19.3359 0.304934C18.9469 -0.0840664 18.3109 -0.0840664 17.9219 0.304934L10.4999 7.72693L3.07793 0.304934C2.68893 -0.0840664 2.05293 -0.0840664 1.66393 0.304934L0.304934 1.66393C-0.0840664 2.05293 -0.0840664 2.68893 0.304934 3.07793L7.72693 10.4999L0.305934 17.9219C-0.0830664 18.3109 -0.0830664 18.9469 0.305934 19.3359L1.66493 20.6949C2.05393 21.0839 2.68993 21.0839 3.07893 20.6949L10.5009 13.2729L17.9229 20.6949C18.3119 21.0839 18.9479 21.0839 19.3369 20.6949L20.6959 19.3359C21.0849 18.9469 21.0849 18.3109 20.6959 17.9219L13.2729 10.4999Z" fill="#EE3643"/>
         </svg>

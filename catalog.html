@@ -213,11 +213,11 @@
                           <path d="M10 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#ABABAB"/>
                         </svg>
                       </button>
-                      <label for="first-scale-toggle">
-                        <input class="filter-range" type="range" min="0" max="30000" step="1" id="first-scale-toggle">
+                      <label class="filter-label-range" for="first-scale-toggle">
+                        <input class="filter-input-range" type="range" min="0" max="30000" step="1" id="first-scale-toggle">
                       </label>
-                      <label for="second-scale-toggle">
-                        <input class="filter-range" type="range" min="0" max="30000" step="1" id="second-scale-toggle">
+                      <label class="filter-label-range" for="second-scale-toggle">
+                        <input class="filter-input-range" type="range" min="0" max="30000" step="1" id="second-scale-toggle">
                       </label>
                     </div>
                   </div>
@@ -236,24 +236,24 @@
                 <legend>Производители:</legend>
                 <ul class="clear-list checkbox-list">
                   <li class="checkbox-item">
-                    <input class="filter-checkbox" type="checkbox" name="manufacturer-bosch" value="bosch" id="filter-manufacturer-bosch" checked>
-                    <label class="filter-checkbox-label" for="filter-manufacturer-bosch">Bosch</label>
+                    <input class="filter-input-checkbox" type="checkbox" name="manufacturer-bosch" value="bosch" id="filter-manufacturer-bosch" checked>
+                    <label class="filter-label-checkbox" for="filter-manufacturer-bosch">Bosch</label>
                   </li>
                   <li class="checkbox-item">
-                    <input class="filter-checkbox" type="checkbox" name="manufacturer-interskol" value="interskol" id="filter-manufacturer-interskol">
-                    <label class="filter-checkbox-label" for="filter-manufacturer-interskol">Интерскол</label>
+                    <input class="filter-input-checkbox" type="checkbox" name="manufacturer-interskol" value="interskol" id="filter-manufacturer-interskol">
+                    <label class="filter-label-checkbox" for="filter-manufacturer-interskol">Интерскол</label>
                   </li>
                   <li class="checkbox-item">
-                    <input class="filter-checkbox" type="checkbox" name="manufacturer-makita" value="makita" id="filter-manufacturer-makita" checked>
-                    <label class="filter-checkbox-label" for="filter-manufacturer-makita">Makita</label>
+                    <input class="filter-input-checkbox" type="checkbox" name="manufacturer-makita" value="makita" id="filter-manufacturer-makita" checked>
+                    <label class="filter-label-checkbox" for="filter-manufacturer-makita">Makita</label>
                   </li>
                   <li class="checkbox-item">
-                    <input class="filter-checkbox" type="checkbox" name="manufacturer-dewalt" value="dewalt" id="filter-manufacturer-dewalt">
-                    <label class="filter-checkbox-label" for="filter-manufacturer-dewalt">Dewalt</label>
+                    <input class="filter-input-checkbox" type="checkbox" name="manufacturer-dewalt" value="dewalt" id="filter-manufacturer-dewalt">
+                    <label class="filter-label-checkbox" for="filter-manufacturer-dewalt">Dewalt</label>
                   </li>
                   <li class="checkbox-item">
-                    <input class="filter-checkbox" type="checkbox" name="manufacturer-hitachi" value="hitachi" id="filter-manufacturer-hitachi">
-                    <label class="filter-checkbox-label" for="filter-manufacturer-hitachi">Hitachi</label>
+                    <input class="filter-input-checkbox" type="checkbox" name="manufacturer-hitachi" value="hitachi" id="filter-manufacturer-hitachi">
+                    <label class="filter-label-checkbox" for="filter-manufacturer-hitachi">Hitachi</label>
                   </li>
                 </ul>
               </fieldset>
@@ -261,12 +261,12 @@
                 <legend>Питание:</legend>
                 <ul class="clear-list radio-list">
                   <li>
-                    <input class="filter-radio" type="radio" name="type-power-supply" value="battery" id="filter-battery" checked>
-                    <label for="filter-battery">Аккумуляторные</label>
+                    <input class="filter-input-radio" type="radio" name="type-power-supply" value="battery" id="filter-battery" checked>
+                    <label class="filter-label-radio" for="filter-battery">Аккумуляторные</label>
                   </li>
                   <li>
-                    <input class="filter-radio" type="radio" name="type-power-supply" value="network" id="filter-network">
-                    <label for="filter-network">Сетевые</label>
+                    <input class="filter-input-radio" type="radio" name="type-power-supply" value="network" id="filter-network">
+                    <label class="filter-label-radio" for="filter-network">Сетевые</label>
                   </li>
                 </ul>
               </fieldset>
@@ -280,9 +280,15 @@
           <section class="sorting">
             <h3 class="clear">Сортировка:</h3>
             <ul class="clear-list sorting-list">
-              <li class="sorting-item"><a class="sorting-link active-link">По цене</a></li>
-              <li class="sorting-item"><a class="sorting-link" href="#">По типу</a></li>
-              <li class="sorting-item"><a class="sorting-link" href="#">По функционалу</a></li>
+              <li class="sorting-item">
+                <a class="sorting-link active-link">По цене</a>
+              </li>
+              <li class="sorting-item">
+                <a class="sorting-link" href="#">По типу</a>
+              </li>
+              <li class="sorting-item">
+                <a class="sorting-link" href="#">По функционалу</a>
+              </li>
               <li class="sorting-item">
                 <a class="sorting-link-arrow active-link" href="#" title="Снизу вверх">
                   <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -428,10 +434,18 @@
             </li>
           </ul>
           <ul class="clear-list pagination-list">
-            <li class="pagination-item active-link"><a>1</a></li>
-            <li class="pagination-item"><a href="#">2</a></li>
-            <li class="pagination-item"><a href="#">3</a></li>
-            <li class="pagination-item"><a href="#">Следующая</a></li>
+            <li class="pagination-item">
+              <a class="pagination-link active-link">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">Следующая</a>
+            </li>
           </ul>
         </section>
       </div>
@@ -592,11 +606,11 @@
       </p>
       <p class="clear-text">
         <input class="modal-login-input login-icon-user" type="email" id="login-login" name="login" placeholder="email@example.com" autocomplete="off" required>
-        <input class="modal-password-input" type="password" id="login-password" name="login" placeholder="••••••••" autocomplete="off" required>
+        <input class="modal-input-password" type="password" id="login-password" name="login" placeholder="••••••••" autocomplete="off" required>
       </p>
       <p class="clear-text login-help">
-        <input class="modal-checkbox visually-hidden" type="checkbox" id="user-remember" name="remember" checked>
-        <label class="modal-checkbox-label" for="user-remember" class="login-checkbox">Запомните меня</label>
+        <input class="modal-input-checkbox visually-hidden" type="checkbox" id="user-remember" name="remember" checked>
+        <label class="modal-label-checkbox" for="user-remember" class="login-checkbox">Запомните меня</label>
         <a class="modal-restore-password" href="#">Я забыл пароль!</a>
       </p>
       <p class="clear-text submit-btn-wrapper">

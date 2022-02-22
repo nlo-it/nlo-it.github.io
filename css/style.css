@@ -96,6 +96,7 @@
   --lavender-pink: #DC91D8;
   --white-aluminum: #A9A9A9;
   --grey-neutral: #ABABAB;
+  --grey-shadow: rgba(171, 171, 171, 0.3);
   --moderate-grey: rgba(255, 255, 255, 0.3);
   --dark-grey: rgba(169, 169, 169, 0.3);
   --darker-grey: rgba(197, 197, 197, 0.3);
@@ -1764,7 +1765,7 @@ footer p {
   animation-delay: -70s;
 }
 
-/*catalog.html*/
+/*Для catalog.html*/
 
 .catalog-body .main-header {
   margin-bottom: 0;
@@ -1834,7 +1835,7 @@ footer p {
 .catalog-grid {
   display: grid;
   grid-template-columns: 220px 720px;
-  gap: 20px;
+  gap: 18px 20px;
 }
 
 .filters {
@@ -1882,7 +1883,6 @@ footer p {
 }
 
 .filters fieldset:nth-child(3) > legend {
-  padding-top: 16px;
   margin-bottom: 15px;
 }
 
@@ -1891,62 +1891,63 @@ footer p {
   margin-bottom: 21px;
 }
 
-.scale-and-toggles {
+/*Range-filter*/
+
+.filters .filter-item {
+  width: 220px;
+}
+
+.filter-item .range-filter {
   width: 100%;
+}
+
+.range-filter .range-controls {
   height: 80px;
-  position: relative;
   background-color: var(--linen);
-  margin-bottom: 9px;
   border-radius: 3px;
+  position: relative;
+  padding: 39px 20px 0 20px;
+  margin-bottom: 9px;
 }
 
-.scale-gray,
-.scale-green {
-  width: 180px;
+.range-controls .scale {
   height: 2px;
+  background: var(--pale-blue);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: var(--herbal);
+}
+
+.range-controls .toggle {
+  width: 4px;
+  height: 4px;
+  border: 8px solid var(--white);
+  background-color: var(--grey-neutral);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--grey-shadow);
+  cursor: pointer;
   position: absolute;
-  left: 20px;
-  top: 39px;
-}
-
-.scale-gray {
-  background-color: var(--pale-blue);
-}
-
-.scale-green {
-  width: 152px;
-  background-color: var(--herbal);
-}
-
-.toggles {
-  width: 100%;
-  height: 20px;
-  position: absolute;
+  box-sizing: content-box;
+  top: 31px;
   left: 0;
-  top: 37px;
 }
 
-.first-toggle-scale,
-.second-toggle-scale {
-  position: absolute;
+.range-controls .toggle:active {
+  background-color: var(--basic-red);
 }
 
-.first-toggle-scale {
+.range-controls .toggle-min {
   left: 18px;
-  top: -8px;
 }
 
-.second-toggle-scale {
+.range-controls .toggle-max {
   left: 160px;
-  top: -8px;
 }
 
-.first-toggle-scale:active path:last-child,
-.second-toggle-scale:active path:last-child {
-  fill: var(--basic-red);
-}
-
-.price-range {
+.price-controls {
   width: 100%;
   height: 38px;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -1954,11 +1955,11 @@ footer p {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 42px;
 }
 
-.price-range::before,
-.price-range::after {
+.price-controls::before,
+.price-controls::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -1966,23 +1967,22 @@ footer p {
   border-bottom: 1px solid var(--light-grey);
 }
 
-.price-range::before {
+.price-controls::before {
   top: 63px;
   left: 0;
 }
 
-.price-range::after {
-  top: 318px;
+.price-controls::after {
+  top: 334px;
   left: 0;
 }
 
-.first-number-label,
-.second-number-label {
+.price-controls label {
   width: 95px;
   height: 100%;
 }
 
-.filter-number {
+.price-controls input {
   width: 95px;
   height: 100%;
   font-size: 17px;
@@ -2002,7 +2002,7 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.filter-number {
+.filter-input-number {
   -moz-appearance: textfield;
 }
 
@@ -2015,6 +2015,8 @@ input::-webkit-inner-spin-button {
   color: var(--tundora);
 }
 
+/*Чекбоксы и радиобаттоны*/
+
 .filters .checkbox-list,
 .filters .radio-list {
   display: flex;
@@ -2024,11 +2026,16 @@ input::-webkit-inner-spin-button {
 }
 
 .filters .checkbox-list {
-  margin-bottom: 26px;
+  margin-bottom: 40px;
 }
 
 .filters .radio-list {
-  margin-bottom: 20px;
+  margin-bottom: 34px;
+}
+
+.filters .checkbox-item:not(:last-child),
+.filters .radio-item:not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .modal-input-checkbox,
@@ -2054,7 +2061,6 @@ input::-webkit-inner-spin-button {
   color: var(--black);
   display: inline-block;
   position: relative;
-  margin-bottom: 18px;
   user-select: none;
   cursor: pointer;
 }
@@ -2122,12 +2128,7 @@ input::-webkit-inner-spin-button {
   cursor: pointer;
 }
 
-.product {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
+/*Sorting*/
 
 .sorting {
   width: 700px;
@@ -2223,11 +2224,13 @@ input::-webkit-inner-spin-button {
   margin-bottom: 28px;
 }
 
+/*Pagination*/
+
 .pagination-list {
   width: 284px;
   height: 38px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   align-self: flex-start;
   margin-bottom: 59px;
 }

@@ -190,44 +190,23 @@
           <form method="get" action="#">
             <fieldset>
               <legend>Фильтр:</legend>
-              <fieldset>
+              <fieldset class="filter-item">
                 <legend>Цена:</legend>
-                <div class="range-slider">
-                  <div class="scale-and-toggles">
+                <div class="range-filter">
+                  <div class="range-controls">
                     <div class="scale">
-                      <span class="scale-gray"></span>
-                      <span class="scale-green"></span>
+                      <div class="bar"></div>
                     </div>
-                    <div class="toggles">
-                      <button type="button" class="clear-btn first-toggle-scale">
-                        <svg width="20" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path opacity=".3" d="M10 20A10 10 0 0 1 0 10v2a10 10 0 0 0 20 0v-2a10 10 0 0 1-10 10Z" fill="#ABABAB"/>
-                          <path d="M10 20a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" fill="#fff"/>
-                          <path d="M10 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#ABABAB"/>
-                        </svg>
-                      </button>
-                      <button type="button" class="clear-btn second-toggle-scale">
-                        <svg width="20" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path opacity=".3" d="M10 20A10 10 0 0 1 0 10v2a10 10 0 0 0 20 0v-2a10 10 0 0 1-10 10Z" fill="#ABABAB"/>
-                          <path d="M10 20a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" fill="#fff"/>
-                          <path d="M10 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="#ABABAB"/>
-                        </svg>
-                      </button>
-                      <label class="filter-label-range" for="first-scale-toggle">
-                        <input class="filter-input-range" type="range" min="0" max="30000" step="1" id="first-scale-toggle">
-                      </label>
-                      <label class="filter-label-range" for="second-scale-toggle">
-                        <input class="filter-input-range" type="range" min="0" max="30000" step="1" id="second-scale-toggle">
-                      </label>
-                    </div>
+                    <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
                   </div>
-                  <div class="price-range">
-                    <label class="first-number-label" for="first-range-toggle">
-                      <input class="filter-number" type="number" min="0" max="30000" step="1" name="first-range-toggle" placeholder="0" id="first-range-toggle">
+                  <div class="price-controls">
+                    <label class="min-price" for="first-range-toggle">
+                      <input class="filter-input-number" type="number" min="0" max="15000" step="1" name="min-price" placeholder="0" id="first-range-toggle">
                     </label>
                     <span class="defis">—</span>
-                    <label class="second-number-label" for="second-range-toggle">
-                      <input class="filter-number" type="number" min="0" max="30000" step="1" name="second-range-toggle" placeholder="30000" id="second-range-toggle">
+                    <label class="max-price" for="second-range-toggle">
+                      <input class="filter-number" type="number" min="15000" max="30000" step="1" name="max-price" placeholder="30000" id="second-range-toggle">
                     </label>
                   </div>
                 </div>
@@ -260,11 +239,11 @@
               <fieldset>
                 <legend>Питание:</legend>
                 <ul class="clear-list radio-list">
-                  <li>
+                  <li class="radio-item">
                     <input class="filter-input-radio" type="radio" name="type-power-supply" value="battery" id="filter-battery" checked>
                     <label class="filter-label-radio" for="filter-battery">Аккумуляторные</label>
                   </li>
-                  <li>
+                  <li class="radio-item">
                     <input class="filter-input-radio" type="radio" name="type-power-supply" value="network" id="filter-network">
                     <label class="filter-label-radio" for="filter-network">Сетевые</label>
                   </li>

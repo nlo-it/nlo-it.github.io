@@ -2319,6 +2319,7 @@ input::-webkit-inner-spin-button {
   left: 25%;
   right: 25%;
   margin: auto;
+  overflow: auto;
   z-index: 1000;
 }
 
@@ -2403,7 +2404,8 @@ input::-webkit-inner-spin-button {
 
 .modal-write-us {
   max-width: 620px;
-  max-height: 430px;
+  /* max-height: 430px; */
+  max-height: 42.157vh;
 }
 
 .modal-write-us > form {

@@ -4,60 +4,60 @@
   font-family: "Cuprum";
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
   src: local("Cuprum"),
     url("/fonts/cuprum.woff2") format("woff2"),
     url("/fonts/cuprum.woff") format("woff");
-  font-display: swap;
 }
 
 @font-face {
   font-family: "Cuprum";
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
   src: local("Cuprum"),
     url("/fonts/cuprumbold.woff2") format("woff2"),
     url("/fonts/cuprumbold.woff") format("woff");
-  font-display: swap;
 }
 
 @font-face {
   font-family: "Cuprum";
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
   src: local("Cuprum"),
     url("/fonts/cuprumbolditalic.woff2") format("woff2"),
     url("/fonts/cuprumbolditalic.woff") format("woff");
-  font-display: swap;
 }
 
 @font-face {
   font-family: "Cuprum";
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
   src: local("Cuprum"),
     url("/fonts/cuprumitalic.woff2") format("woff2"),
     url("/fonts/cuprumitalic.woff") format("woff");
-  font-display: swap;
 }
 
 @font-face {
   font-family: "PT Sans";
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
   src: local("PT Sans"),
     url("/fonts/ptsans.woff2") format("woff2"),
     url("/fonts/ptsans.woff") format("woff");
-  font-display: swap;
 }
 
 @font-face {
   font-family: "PT Sans";
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
   src: local("PT Sans"),
     url("/fonts/ptsansbold.woff2") format("woff2"),
     url("/fonts/ptsansbold.woff") format("woff");
-  font-display: swap;
 }
 
 /*Variables*/
@@ -542,7 +542,7 @@ img {
 }
 
 .contacts-phone {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
   line-height: 30px;
   color: var(--basic-red);
@@ -841,7 +841,7 @@ img {
 .promo-list h3 {
   font-size: 24px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   color: var(--white);
   display: inline-block;
@@ -901,7 +901,7 @@ img {
 }
 
 .promo-slider h3 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
@@ -1088,7 +1088,7 @@ img {
   width: 220px;
   min-height: 318px;
   font-family: "PT Sans", "Arial", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   border: 1px solid var(--magnolia);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1368,7 +1368,7 @@ img {
   height: 61px;
   font-size: 21px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   color: var(--white);
   background-color: var(--dark-blue);
   display: inline-block;
@@ -1735,7 +1735,7 @@ footer p {
   color: var(--basic-red);
   position: relative;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .button-close {
@@ -1972,7 +1972,7 @@ footer p {
 .filters legend {
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
@@ -2577,7 +2577,7 @@ footer p {
 .message-text {
   font-size: 24px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   color: var(--black);
   display: -webkit-box;

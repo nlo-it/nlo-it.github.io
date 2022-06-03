@@ -108,8 +108,8 @@
 
 *,
 *::before,
-*::after { 
-  -webkit-box-sizing: border-box; 
+*::after {
+  -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
@@ -733,7 +733,7 @@ img {
   flex-wrap: wrap;
   padding: 0 23px 0 25px;
   margin-bottom: 60px;
-  
+
 }
 
 .main-navigation-link {
@@ -1767,9 +1767,9 @@ footer p {
 .cloud {
   width: 200px;
   height: 50px;
-  background-color: var(--white);   
+  background-color: var(--white);
   border-radius: 30px;
-  position: absolute; 
+  position: absolute;
   top: 100px;
 }
 
@@ -1780,7 +1780,7 @@ footer p {
   height: 50px;
   top: -20px;
   left: 20px;
-  background-color: var(--white);   
+  background-color: var(--white);
   border-radius: 30px;
   position: absolute;
   -webkit-box-shadow: 80px 0 0 10px var(--white), 40px 0 0 20px var(--white), 110px 0 0 -5px var(--white),
@@ -1796,7 +1796,7 @@ footer p {
   height: 50px;
   top: -20px;
   left: 25px;
-  background-color: var(--white);   
+  background-color: var(--white);
   border-radius: 30px;
   position: absolute;
   -webkit-box-shadow: 40px -10px 0 20px var(--white), 80px -10px 0 10px var(--white), 115px -5px 0 -10px var(--white),
@@ -1812,7 +1812,7 @@ footer p {
   height: 50px;
   top: -20px;
   left: 25px;
-  background-color: var(--white);   
+  background-color: var(--white);
   border-radius: 30px;
   position: absolute;
   -webkit-box-shadow: 40px -10px 0 15px var(--white), 90px 0 0 15px var(--white),
@@ -1827,6 +1827,52 @@ footer p {
   }
   to {
     left:110%;
+  }
+}
+
+/*Анимация открытия модального окна*/
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -1852,6 +1898,58 @@ footer p {
 [data-speed="7"] {
   animation: linemove 50s;
   -webkit-animation: linemove 50s;
+}
+
+/*Анимация тряски формы по горизонтали в случае ошибки*/
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
 }
 
 .cloud {
@@ -2508,6 +2606,17 @@ footer p {
 }
 
 /*Модальные окна*/
+
+.modal-show {
+  display: block;
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
+}
+
+.modal-error {
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
+}
 
 .modal-wrap {
   display: -webkit-box;

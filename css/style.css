@@ -1538,10 +1538,15 @@ img {
 }
 
 .contacts .map {
-  width: 100%;
-  height: 158px;
+  /* width: 100%; */
+  /* height: 158px; */
+  border: 1px solid transparent;
   margin-bottom: 25px;
   cursor: pointer;
+}
+
+.contacts .map:hover {
+  border: 1px solid var(--basic-red);
 }
 
 .contacts img {

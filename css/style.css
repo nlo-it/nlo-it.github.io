@@ -1540,13 +1540,12 @@ img {
 .contacts .map {
   /* width: 100%; */
   /* height: 158px; */
-  border: 1px solid transparent;
   margin-bottom: 25px;
   cursor: pointer;
 }
 
 .contacts .map:hover {
-  border: 1px solid var(--basic-red);
+  outline: 1px solid var(--basic-red);
 }
 
 .contacts img {
@@ -2648,7 +2647,7 @@ footer p {
 
 .modal-map {
   max-width: 943px;
-  max-height: 449px;
+  max-height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2656,10 +2655,6 @@ footer p {
 
 .modal-map iframe {
   border: none;
-}
-
-.modal-map-content {
-  margin: auto;
 }
 
 /*modal-add-item*/

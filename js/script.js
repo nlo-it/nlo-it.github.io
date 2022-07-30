@@ -49,6 +49,34 @@ loginForm.addEventListener('submit', function (evt) {
   };
 });
 
+// Реакция на нажатие кнопки "Купить" - всплывающей по хаверу на карточках товара
+const openAddItem = document.querySelectorAll(".buy-btn");
+const addItemModal = document.querySelector(".modal-add-item");
+const closeAddItem = addItemModal.querySelector(".modal-add-item .close-btn");
+const shoppingContinue = addItemModal.querySelector(".add-item-btn");
+
+for (let i = 0; i < openAddItem.length; i++) {
+  openAddItem[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    addItemModal.classList.remove("visually-hidden");
+    addItemModal.classList.add("modal-add-item");
+  })
+}
+
+shoppingContinue.addEventListener("click", function () {
+  addItemModal.classList.add("visually-hidden");
+});
+
+closeAddItem.addEventListener("click", function () {
+  addItemModal.classList.add("visually-hidden");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    addItemModal.classList.add("visually-hidden");
+  }
+});
+
 window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
     if (!loginModal.classList.contains('visually-hidden')) {
@@ -115,34 +143,6 @@ window.addEventListener('keydown', function (evt) {
       writeUsModal.classList.remove('modal-error');
     };
   };
-});
-
-// Реакция на нажатие кнопки "Купить" - всплывающей по хаверу на карточках товара
-const openAddItem = document.querySelectorAll(".buy-btn");
-const addItemModal = document.querySelector(".modal-add-item");
-const closeAddItem = addItemModal.querySelector(".modal-add-item .close-btn");
-const shoppingContinue = addItemModal.querySelector(".add-item-btn");
-
-for (let i = 0; i < openAddItem.length; i++) {
-  openAddItem[i].addEventListener("click", function (evt) {
-    evt.preventDefault();
-    addItemModal.classList.remove("visually-hidden");
-    addItemModal.classList.add("modal-add-item");
-  })
-}
-
-shoppingContinue.addEventListener("click", function () {
-  addItemModal.classList.add("visually-hidden");
-});
-
-closeAddItem.addEventListener("click", function () {
-  addItemModal.classList.add("visually-hidden");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    addItemModal.classList.add("visually-hidden");
-  }
 });
 
 // Открытие интерактивной карты сайта
